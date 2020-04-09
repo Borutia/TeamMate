@@ -1,0 +1,39 @@
+html{
+    background: black;
+    background: url(../image/background.jpg) ;
+    max-width: 1153px;
+    max-height: 700px;
+}
+
+.frame{
+    display:flex;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.background_crystal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.form_personal_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal_information{
+    position: absolute;
+    width: 900px;
+    height: 100%;
+    top: 0%;
+    background: #FFFFFF;
+}

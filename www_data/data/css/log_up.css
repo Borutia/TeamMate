@@ -1,0 +1,485 @@
+html{
+    background: black;
+    background: url(../image/background.jpg) ;
+    max-width: 1153px;
+    max-height: 700px;
+}
+
+.frame{
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    text-align: center; 
+}
+
+input{
+    padding: 1%;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    box-shadow: inset 3px 3px 6px #5FF252;
+    height: 30px;
+    width: 398px;
+    left: 31%;
+}
+
+.background_crystal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.75);
+    overflow: scroll;
+}
+
+.form_sign_up{
+    display: inline-block;
+}
+
+.personal_data{
+    position: relative;
+    width: 635px;
+    height: 330px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border: 1px solid #5262F2;
+    background: #FFFFFF;
+}
+
+.personal_data span{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-family: Tinos;
+    font-size: 30px;
+    line-height: 34px;
+    color: #5BA963;
+}
+
+#sername{
+    top: 20%;
+}
+
+.sername span{
+    position: absolute;
+    left: 17.5%;
+    top: 19%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+.name span{
+    position: absolute;
+    left: 23%;
+    top: 31%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#name{
+    top: 32%;
+} 
+
+.patronymic span{
+    position: absolute;
+    left: 17%;
+    top: 43%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#patronymic{
+    top: 44%;
+}
+
+.birthday span{
+    position: absolute;
+    left: 10%;
+    top: 54%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#birthday{
+    top: 55%;
+}
+
+.gender span{
+    position: absolute;
+    left: 23%;
+    top: 66%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;  
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gender .submenu{
+    position: absolute;
+    width: 398px;
+    height: 30px;
+    left: 31%;
+    top: 67%;
+    background: #FFFFFF;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    box-shadow: inset 3px 3px 6px #5FF252;
+}
+
+.current_city span{
+    position: absolute;
+    left: 5.5%;
+    top: 80%;
+    font-family: Tinos;
+    font-size: 18px;
+    line-height: 21px;
+    color: #0F25ED;
+}
+
+#current_city{
+    top: 79%; 
+}
+
+.education{
+    position: relative;
+    width: 635px;
+    height: 330px;
+    border: 1px solid #5262F2;
+    background: #FFFFFF;
+    margin-bottom: 5%;
+}
+
+.education span{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-family: Tinos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+    color: #5BA963;
+}
+
+.country span{
+    position: absolute;
+    left: 20%;
+    top: 19%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#country{
+    top: 20%;
+}
+
+.city span{
+    position: absolute;
+    left: 21.5%;
+    top: 31%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#city{
+    top: 32%;
+}
+
+.university span{
+    position: absolute;
+    left: 24%;
+    top: 43%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#university{
+    top: 44%;
+}
+
+.specialty span{
+    position: absolute;
+    left: 10%;
+    top: 54%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#specialty {
+    top: 55%;
+}
+
+.learning_peroid span{
+    position: absolute;
+    left: 6.3%;
+    top: 66%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;  
+}
+
+#learning_peroid_from{
+    width: 178px;
+    left: 31%;
+    top: 67%;
+}
+
+#learning_peroid_to{
+    width: 179px;
+    left: 65.5%;
+    top: 67%;
+}
+
+.learning_peroid .dash{
+    position: absolute;
+    width: 41px;
+    height: 31px;
+    left: 59%;
+    top: 65%;
+    font-family: Roboto;
+    font-size: 36px;
+    color: #0F25ED;
+}
+
+#button_add_education{
+    position: absolute;
+    width: 232px;
+    height: 36px;
+    left: 57%;
+    top: 83%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+    background: #FFFFFF;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.about_me {
+    position: relative;
+    display: flex;
+    width: 635px;
+    min-height: 330px;
+    border: 1px solid #5262F2;
+    background: #FFFFFF;
+    margin-bottom: 5%;
+}
+.about_me span{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-family: Tinos;
+    font-size: 30px;
+    line-height: 34px;
+    color: #5BA963;
+}
+
+.about_me span{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-family: Tinos;
+    font-size: 30px;
+    line-height: 34px;
+    color: #5BA963;
+}
+
+.about_me_input span
+{
+    position: absolute;
+    left: 21%;
+    top: 19%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#about_me_input{
+    top: 20%;
+}
+
+.personal_qualities span{
+    position: absolute;
+    left: 8%;
+    top: 31%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#personal_qualities{
+    top: 32%;
+}
+
+#button_add_personal_qualities{
+    position: absolute;
+    width: 232px;
+    height: 36px;
+    left: 57%;
+    top: 44%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+    background: #FFFFFF;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.professional_skills span{
+    position: absolute;
+    left: 5%;
+    top: 54%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#professional_skills{
+    top: 58%;
+}
+
+.professional_skills #skills{
+    left: 19.5%;
+    top: 59%;
+}
+
+#button_add_professional_skills{
+    position: absolute;
+    width: 232px;
+    height: 36px;
+    left: 57%;
+    top: 70%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+    background: #FFFFFF;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.personal_area{
+    position: relative;
+    width: 635px;
+    height: 330px;
+    border: 1px solid #5262F2;
+    background: #FFFFFF;
+    margin-bottom: 5%;
+}
+
+.personal_area span{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-family: Tinos;
+    font-size: 30px;
+    line-height: 34px;
+    color: #5BA963;
+}
+
+#button_add_photo{
+    position: absolute;
+    left: 31%;
+    top: 23%;
+    padding: 0.7%;
+}
+
+#image_name{
+    position: absolute;
+    left: 10.5%;
+    top: 22%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+.login span{
+    position: absolute;
+    left: 21%;
+    top: 35%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#login{
+    top: 36%;
+}
+
+.e_mail span{
+    position: absolute;
+    left: 21%;
+    top: 48%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#e_mail{
+    top: 49%;
+}
+
+.phone span{
+    position: absolute;
+    left: 18.3%;
+    top: 61%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#phone{
+    top: 62%;
+}
+
+.password span{
+    position: absolute;
+    left: 19.8%;
+    top: 74%;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+}
+
+#password{
+    top: 75%;
+}
+
+#button_log_up{
+    position: relative;
+    width: 636px;
+    height: 47px;
+    background: #5EC939;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: Tinos;
+    font-size: 30px;
+    line-height: 34px;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 5%;
+}

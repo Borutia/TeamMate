@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/log_up.js"></script>
+    <link rel="stylesheet" href="../css/log_up.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="background_crystal">
+                <form class="form_sign_up" action="">
+                    <div class="personal_data">
+                        <span >Личные данные</span>
+                        <div class="sername">
+                            <span>Фамилия</span>
+                            <input id="sername" type="text" required>
+                        </div>
+                        <div class="name">
+                            <span>Имя</span>
+                            <input id="name" type="text" required>
+                        </div>
+                        <div class="patronymic">
+                            <span>Отчество</span>
+                            <input id="patronymic" type="text">
+                        </div>
+                        <div class="birthday">
+                            <span>Дата рождения</span>
+                            <input id="birthday" type="date" required/>
+                        </div>
+                        <div class="gender" >
+                            <span>Пол </span>
+                            <select class="submenu" required></select>
+                        </div>
+                        <div class="current_city">
+                            <span>Город проживания</span>
+                            <input id="current_city" type="text" required>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <span>Образование</span>
+                        <div class="country">
+                            <span>Страна</span>
+                            <input id="country" type="text">
+                        </div>
+                        <div class="city">
+                            <span>Город</span>
+                            <input id="city" type="text">
+                        </div>
+                        <div class="university">
+                            <span>Вуз</span>
+                            <input id="university" type="text">
+                        </div>
+                        <div class="specialty">
+                            <span>Специальность</span>
+                            <input id="specialty" type="text">
+                        </div>
+                        <div class="learning_peroid">
+                            <span>Срок обучаемости</span>
+                            <input id="learning_peroid_from" type="text">
+                            <span class="dash">-</span>
+                            <input id="learning_peroid_to" type="text">
+                            <button id="button_add_education">Добавить Образование</button>
+                        </div>
+                    </div>
+                    <div class="about_me">
+                        <span>О себе</span>
+                        <div class="about_me_input">
+                            <span>О себе</span>
+                            <input id="about_me_input" type="text">
+                        </div>
+                        <div class="personal_qualities">
+                            <span>Личные качества</span>
+                            <input id="personal_qualities" type="text">
+                        </div>
+                        <button type="submit" id="button_add_personal_qualities">Добавить</button>
+                        <div class="professional_skills">
+                            <span>Профессиональные</span>
+                            <span id="skills">навыки</span>
+                            <input id="professional_skills" type="text">
+                        </div>
+                        <button type="submit" id="button_add_professional_skills">Добавить</button>
+                    </div>
+                    <div class="personal_area">
+                        <span>Личный кабинет</span>
+                        <span id="image_name">Загрузить фото</span>
+                        <input type="file" multiple="multiple" accept="image/jpeg,image/png" id="button_add_photo">
+                        <div class="login">
+                            <span>Логин</span>
+                            <input id="login" type="text" required>
+                        </div>
+                        <div class="e_mail">
+                            <span>E-mail</span>
+                            <input id="e_mail" type="text" required>
+                        </div>
+                        <div class="phone">
+                            <span>Телефон</span>
+                            <input id="phone" type="text">
+                        </div>
+                        <div class="password">
+                            <span>Пароль</span>
+                            <input id="password" type="text" required>
+                        </div>
+                    </div>
+                    <button type="submit" id="button_log_up">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
