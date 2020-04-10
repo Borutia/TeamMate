@@ -9,7 +9,12 @@ $(function(){
         location.href = '../data/view/personal_area.html';
     }
     */
-    
+        //обработка нажатия Enter в полях ввода логина и пароля
+    $("#login, #password").keydown(function (e) {
+        if (e.which == 13) { //код клавиши "Enter"
+        $("#button_log_in").click();
+        }
+    });
 });
 
 function click_log_in()
