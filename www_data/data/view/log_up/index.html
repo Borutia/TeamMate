@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Регистрация</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../data/view/log_up/js/log_up.js"></script>
+    <script src="../log_up/js/log_up.js"></script>
     <link rel="stylesheet" href="../log_up/css/log_up.css">
 </head>
 
@@ -12,32 +12,32 @@
     <div class="container">
         <div class="frame">
             <div class="background_crystal">
-                <form class="form_sign_up" action="">
+                <form class="form_sign_up" onsubmit="return false;">
                     <div class="personal_data">
                         <span >Личные данные</span>
                         <div class="sername">
-                            <span>Фамилия</span>
-                            <input id="sername" type="text" required>
+                            <span id="star">Фамилия*</span>
+                            <input id="sername" type="text" >
                         </div>
                         <div class="name">
-                            <span>Имя</span>
-                            <input id="name" type="text" required>
+                            <span>Имя*</span>
+                            <input id="name" type="text">
                         </div>
                         <div class="patronymic">
                             <span>Отчество</span>
                             <input id="patronymic" type="text">
                         </div>
                         <div class="birthday">
-                            <span>Дата рождения</span>
-                            <input id="birthday" type="date" required/>
+                            <span>Дата рождения*</span>
+                            <input id="birthday" type="date"/>
                         </div>
                         <div class="gender" >
-                            <span>Пол </span>
-                            <select class="submenu" required></select>
+                            <span>Пол* </span>
+                            <select class="submenu" ></select>
                         </div>
                         <div class="current_city">
-                            <span>Город проживания</span>
-                            <input id="current_city" type="text" required>
+                            <span>Город проживания*</span>
+                            <input id="current_city" type="text">
                         </div>
                     </div>
                     <div class="education">
@@ -65,6 +65,9 @@
                             <input id="learning_peroid_to" type="text">
                             <button id="button_add_education">Добавить Образование</button>
                         </div>
+                        <div class="all_educations">
+                            
+                        </div>
                     </div>
                     <div class="about_me">
                         <span>О себе</span>
@@ -76,36 +79,36 @@
                             <span>Личные качества</span>
                             <input id="personal_qualities" type="text">
                         </div>
-                        <button type="submit" id="button_add_personal_qualities">Добавить</button>
+                        <button id="button_add_personal_qualities">Добавить</button>
                         <div class="professional_skills">
                             <span>Профессиональные</span>
                             <span id="skills">навыки</span>
                             <input id="professional_skills" type="text">
                         </div>
-                        <button type="submit" id="button_add_professional_skills">Добавить</button>
+                        <button id="button_add_professional_skills">Добавить</button>
                     </div>
                     <div class="personal_area">
                         <span>Личный кабинет</span>
                         <span id="image_name">Загрузить фото</span>
                         <input type="file" multiple="multiple" accept="image/jpeg,image/png" id="button_add_photo">
                         <div class="login">
-                            <span>Логин</span>
-                            <input id="login" type="text" required>
+                            <span>Логин*</span>
+                            <input id="login" type="text">
                         </div>
                         <div class="e_mail">
-                            <span>E-mail</span>
-                            <input id="e_mail" type="text" required>
+                            <span>E-mail*</span>
+                            <input id="e_mail" type="text">
                         </div>
                         <div class="phone">
                             <span>Телефон</span>
                             <input id="phone" type="text">
                         </div>
                         <div class="password">
-                            <span>Пароль</span>
-                            <input id="password" type="text" required>
+                            <span>Пароль*</span>
+                            <input id="password" type="text">
                         </div>
                     </div>
-                    <button type="submit" id="button_log_up">Зарегистрироваться</button>
+                    <button id="button_log_up">Зарегистрироваться</button>
                 </form>
             </div>
         </div>

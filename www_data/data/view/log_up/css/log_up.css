@@ -1,6 +1,6 @@
 html{
     background: black;
-    background: url(../image/background.jpg) ;
+    background: url(../../../image/background.jpg) ;
     max-width: 1153px;
     max-height: 700px;
 }
@@ -157,6 +157,7 @@ ul {
 
 .education{
     position: relative;
+    display: flex;
     width: 635px;
     height: 330px;
     border: 1px solid #5262F2;
@@ -274,6 +275,20 @@ ul {
     box-sizing: border-box;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+}
+
+.all_educations{
+    position: relative;
+    display: flex;
+    top: 100%;
+    width: 620px;
+    border: 1px solid #5262F2;
+}
+
+.all_educations span{
+    font-family: Tinos;
+    font-size: 28px;
+    color:#0F25ED;
 }
 
 .about_me {

@@ -1,21 +1,29 @@
-$(function(){
+$(function(){  
+    
     $('#button_log_in').click(function(){
         click_log_in();
     });
-
-    /*
-    if(token == 'succes')
-    {
-        location.href = '../data/view/personal_area.html';
-    }
-    */
         //обработка нажатия Enter в полях ввода логина и пароля
     $("#login, #password").keydown(function (e) {
         if (e.which == 13) { //код клавиши "Enter"
-        $("#button_log_in").click();
+            $("#button_log_in").click();
         }
     });
 });
+
+function get_url()
+{
+   // location.href += "?";
+    /*
+    var url = '/static_pages/private/crm_b2b_report/index.html';
+    url += '?client$c=' + user;
+    url += '&session_id=' + data.session_id;
+    if (report_mode !== undefined)
+        url += '&report_mode=' + report_mode;
+    url += '&tmp=';
+    document.location.href = url;
+    */
+}
 
 function click_log_in()
 {
@@ -40,9 +48,11 @@ function click_log_in()
             error: function(request, error){
                 if (error == "timeout") {
                     alert(log_in_error_timeout);
+                  //  location.reload();
                 }
                 else {
                     alert(log_in_error_default);
+                   // location.reload();
                 }
             },
             success: function(data){
@@ -50,12 +60,13 @@ function click_log_in()
                 var jsonData = $.parseJSON(jsonData);
                 if (jsonData.success == "1")
                 {
-                    location.href = '../data/view/personal_area.html';
+                    location.href = '../data/view/personal_area/';
                 }
                 else
                 {
                     alert('Введен некорректный логин или пароль!' + "\n"
                           + 'Повторите попытку входа.');
+                   // location.reload();
                 }
             }
         });
