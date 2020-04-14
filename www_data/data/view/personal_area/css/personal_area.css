@@ -1,6 +1,6 @@
 html{
     background: black;
-    background: url(../image/background.jpg) ;
+    background: url(../../../image/background.jpg) ;
     max-width: 1153px;
     max-height: 700px;
 }
@@ -24,16 +24,95 @@ html{
     background: rgba(255, 255, 255, 0.75);
 }
 
+.main_menu{
+    display: inline-block; 
+    position: absolute;
+    width: 234px;
+    height: 574px;
+    left: 0%;
+    top: 0%;
+    background: rgba(255, 255, 255, 0.89);
+}
+
+.char_T{
+    top: 5%;
+    left: 30%;
+    position: absolute;
+    font-size: 48px;
+    color: #0F25ED;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.char_eam{
+    position: absolute;
+    left: 42%;
+    top: 6%;
+    font-size: 28px;
+    color: #000000;
+}
+
+.char_M{
+    position: absolute;
+    left: 38%;
+    top: 9%;
+    font-size: 48px;
+    color: #43DE36;
+}
+
+.char_ate{
+    position: absolute;
+    left: 56%;
+    top: 12%;
+    font-size: 28px;
+    color: #000000;
+}
+
 .form_personal_area{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.style_of_text{
+    font-family: Tinos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+}
+
 .personal_information{
     position: absolute;
-    width: 900px;
+    width: 850px;
     height: 100%;
     top: 0%;
     background: #FFFFFF;
+}
+
+.name_of_person{
+    position: absolute;
+    width: 850px;
+    height: 70px;
+    border: 2px solid rgba(82, 98, 242, 0.5);
+}
+
+#name_of_person{
+    position: absolute;
+    left: 2%;
+    top: 25%;
+}
+
+#login_of_person{
+    float: right;
+    margin-right: 2%;
+    margin-top: 2%;
+    top: 25%; 
+    color: #C4C4C4;
+}
+
+.personal_left_block{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    border: 2px solid rgba(82, 98, 242, 0.5);
+    top: 7.7%;
 }
