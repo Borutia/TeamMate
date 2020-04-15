@@ -23,13 +23,30 @@ html{
     background: rgba(255, 255, 255, 0.75);
 }
 
+.open_main_menu:first-letter{
+    color: #5262F2;
+}
+.open_main_menu{
+    position:  absolute;
+    width: 150px;
+    height: 70px;
+    left: 0%;
+    top: 0%;
+    background: #FFFFFF;
+    font-size: 24px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+button:focus {
+    outline: none;
+}
+
 .main_menu{
     position: absolute;
     width: 234px;
     height: 574px;
-    left: 0%;
-    top: 0%;
-    margin: 1%;
+    left: -50%;
+    top: 100px;
     background: rgba(255, 255, 255, 0.75);
 }
 
@@ -356,6 +373,15 @@ html{
     border-radius: 10px;
     font-size: 20px;
     margin-bottom: 2%;
+}
+
+.button_all{
+    border-radius: 10px;
+    width: 70px;
+    height: 28px;
+    float: right;
+    margin-right: 2%;
+    background: #FFFFFF;
 }
 
 .personal_completed_projects{

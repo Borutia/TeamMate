@@ -2,12 +2,31 @@ $(function (){
     $(window).resize(function(){
         location.reload();
     });
+    main_menu();
     set_scroll_height('.personal_left_block');
     set_scroll_height('.personal_right_block');
 
     test();
 });
 
+
+function main_menu()
+{
+    $('.open_main_menu').click(function() {
+        if(!$('.main_menu').hasClass('openDone'))
+        {
+            $('.main_menu').addClass('openDone');
+            $('.main_menu').css("left", "0%");
+            $('.open_main_menu').text("Скрыть меню");
+        }
+        else
+        {
+            $('.main_menu').removeClass('openDone');
+            $('.main_menu').css("left", "-50%");
+            $('.open_main_menu').text("Показать меню");
+        }
+    });
+}
 
 
 function test()
@@ -71,5 +90,5 @@ function set_scroll_height(block) {
     //получаем высоту страницы
     var h_all = $(document).outerHeight(true);
     //устанавливаем высоту блока для прокрутки
-    $(block).css('height', h_all - 98);
+    $(block).css('height', h_all - 93);
 }

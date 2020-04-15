@@ -41,6 +41,10 @@ input{
     display: inline-block;
 }
 
+button:focus {
+    outline: none;
+}
+
 .personal_data{
     position: relative;
     width: 635px;
