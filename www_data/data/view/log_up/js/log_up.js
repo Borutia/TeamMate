@@ -1,7 +1,7 @@
 $(function (){
   get_gender();
   get_red_stars();
-  //get_required();
+  get_required();
   
   $('#button_add_education').click(function(){
     get_new_educatin();

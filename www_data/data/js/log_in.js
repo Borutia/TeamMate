@@ -1,15 +1,29 @@
 $(function(){  
+   
+       // click_log_in();
+        test();
     
-    $('#button_log_in').click(function(){
-        click_log_in();
-    });
-        //обработка нажатия Enter в полях ввода логина и пароля
+    
+    /*
+    //обработка нажатия Enter в полях ввода логина и пароля
     $("#login, #password").keydown(function (e) {
         if (e.which == 13) { //код клавиши "Enter"
             $("#button_log_in").click();
         }
     });
+    */
 });
+
+function test(){
+    $('#button_log_in').click(function(){
+    var login = $('#login').val();
+    var password = $('#password').val();
+    if(login === "admin" && password === "admin")
+    {
+        location.href = '../data/view/personal_area/';
+    }
+});
+}
 
 function get_url()
 {

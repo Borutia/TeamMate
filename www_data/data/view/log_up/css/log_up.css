@@ -3,7 +3,18 @@ html{
     max-width: 1153px;
     max-height: 700px;
 }
-
+/*плавная загрузка страниц*/
+@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+ 
+body {
+  -webkit-animation: fade-in 1s linear; /* Safari 4+ */
+  -moz-animation: fade-in 1s linear; /* Fx 5+ */
+  -o-animation: fade-in 1s linear; /* Opera 12+ */
+  animation: fade-in 1s linear; /* IE 10+, Fx 29+ */
+}
 .frame{
     display: flex;
 }
@@ -280,19 +291,7 @@ ul {
     border-radius: 10px;
 }
 
-.all_educations{
-    position: relative;
-    display: flex;
-    top: 100%;
-    width: 620px;
-    border: 1px solid #5262F2;
-}
 
-.all_educations span{
-    font-family: Tinos;
-    font-size: 28px;
-    color:#0F25ED;
-}
 
 .about_me {
     position: relative;
