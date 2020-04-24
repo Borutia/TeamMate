@@ -1,0 +1,42 @@
+html{
+    background: url(../image/background.jpg) ;
+    max-width: 1153px;
+    max-height: 700px;
+}
+/*плавная загрузка страниц*/
+@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+ 
+body {
+  -webkit-animation: fade-in 1s linear; /* Safari 4+ */
+  -moz-animation: fade-in 1s linear; /* Fx 5+ */
+  -o-animation: fade-in 1s linear; /* Opera 12+ */
+  animation: fade-in 1s linear; /* IE 10+, Fx 29+ */
+}
+
+.frame{
+    display:flex;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.background_crystal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.75);
+}
+.style_of_text{
+    font-family: Tinos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+}

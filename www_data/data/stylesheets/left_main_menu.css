@@ -1,0 +1,183 @@
+.open_main_menu:first-letter{
+    color: #5262F2;
+}
+.open_main_menu{
+    position:  absolute;
+    width: 150px;
+    height: 70px;
+    left: 0%;
+    top: 0%;
+    background: #FFFFFF;
+    font-size: 24px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.main_menu{
+    position: absolute;
+    width: 234px;
+    height: 574px;
+    left: 0%;
+    top: 100px;
+    background: rgba(255, 255, 255, 0.75);
+    display: block;
+}
+
+#char_T{
+    top: 2%;
+    left: 30%;
+    font-size: 48px;
+    position: absolute;
+    color: #0F25ED;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#char_eam{
+    position: absolute;
+    left: 42%;
+    font-size: 28px;
+    top: 3%;
+    color: #000000;
+}
+
+#char_M{
+    position: absolute;
+    left: 38%;
+    font-size: 48px;
+    top: 6%;
+    color: #43DE36;
+}
+
+#char_ate{
+    position: absolute;
+    left: 56%;
+    top: 9%;
+    font-size: 28px;
+    color: #000000;
+}
+
+.main_menu_projects{
+    position: absolute;
+    width: 216px;
+    height: 24px;
+    left: 3%;
+    top: 20%;
+    background: #5262F2;
+    border-radius: 10px;
+}
+
+#main_menu_projects{
+    position: absolute;
+    font-size: 20px;
+    color: #FFFFFF;
+    left: 34%;
+}
+
+#href_all_projects{
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    left: 5%;
+    top: 25%;
+}
+
+#href_my_projects{
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    left: 5%;
+    top: 30%;
+}
+
+#href_my_participation{
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    left: 5%;
+    top: 35%;
+}
+#href_all_projects:hover { 
+    text-decoration: underline;
+    color: blue;
+} 
+#href_my_projects:hover { 
+    text-decoration: underline;
+    color: blue;
+} 
+#href_my_participation:hover { 
+    text-decoration: underline;
+    color: blue;
+} 
+
+.main_menu_people{
+    position: absolute;
+    width: 216px;
+    height: 24px;
+    left: 3%;
+    top: 45%;
+    background: #5EC939;
+    border-radius: 10px;
+}
+
+#main_menu_people{
+    position: absolute;
+    font-size: 20px;
+    color: #FFFFFF;
+    left: 39%;
+}
+
+#href_job_seekers{
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    left: 5%;
+    top: 50%;
+}
+
+#href_personal_area{
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    left: 5%;
+    top: 55%;
+}
+#href_job_seekers:hover { 
+    text-decoration: underline;
+    color: blue;
+} 
+#href_personal_area:hover { 
+    text-decoration: underline;
+    color: blue;
+} 
+
+#button_Settings{
+    position: absolute;
+    width: 216px;
+    left: 3%;
+    top: 80%;
+    background: #FCC400;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#button_exit{
+    position: absolute;
+    width: 216px;
+    left: 3%;
+    top: 90%;
+    background: #D01E1E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
