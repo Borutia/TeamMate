@@ -105,14 +105,17 @@ button:focus {
 #href_all_projects:hover { 
     text-decoration: underline;
     color: blue;
+    cursor: pointer;
 } 
 #href_my_projects:hover { 
     text-decoration: underline;
     color: blue;
+    cursor: pointer;
 } 
 #href_my_participation:hover { 
     text-decoration: underline;
     color: blue;
+    cursor: pointer;
 } 
 
 .main_menu_people{
@@ -152,10 +155,12 @@ button:focus {
 #href_job_seekers:hover { 
     text-decoration: underline;
     color: blue;
+    cursor: pointer;
 } 
 #href_personal_area:hover { 
     text-decoration: underline;
     color: blue;
+    cursor: pointer;
 } 
 
 #button_Settings{

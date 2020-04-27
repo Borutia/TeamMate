@@ -2,14 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Все проекты</title>
+    <title>Новый проект</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../my_projects/js/my_projects.js"></script>
+    <script src="../create_new_project/js/create_new_project.js"></script>
     <script src="../../js/main_menu.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="../all_projects/css/all_projects.css">
-    <link rel="stylesheet" href="../../stylesheets/form_projects.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>    <script src="../log_up/js/log_up.js"></script>
+    <link rel="stylesheet" href="../create_new_project/css/create_new_project.css">
     <link rel="stylesheet" href="../../stylesheets/left_main_menu.css">
     <link rel="stylesheet" href="../../stylesheets/background.css">
 </head>
@@ -18,7 +17,7 @@
     <div class="container">
         <div class="frame">
             <div class="background_crystal">
-                <form class="form_all_projects" onsubmit="return false;">
+                <form class="form_create_new_projects" onsubmit="return false;">
                     <button class="open_main_menu ">Скрыть меню</button>
                     <div class="main_menu">
                         <div class="main_menu_logo">
@@ -41,31 +40,32 @@
                         <button class="style_of_text" id="button_Settings">Настройки профиля</button>
                         <button class="style_of_text" id="button_exit">Выход</button>
                     </div>
-                    <div class="form_projects">
-                        <div class="header_block">
-                            <div class="header_block_1">
-                                <button class="style_of_text" id="button_all_projects">Все проекты</button>
-                                <button class="style_of_text" id="button_in_progress">В разработке</button>
-                                <button class="style_of_text" id="button_success">Завершенные</button>
-                                <button class="style_of_text" id="button_zip">Архивированные</button>
-                            </div>
-                            <div class="header_block_2">
-                                <input id="search_projects" placeholder="Поиск по название проекта" type="text">
-                            </div>
+
+                    <div class="about_project">
+                        <span id="span_about_project">О проекте</span>
+                        <div class="name_of_project">
+                            <span >Название*</span>
+                            <input id="name_of_project" type="text" >
                         </div>
-                        <div class="view_projects">
-                            <div class="my_projects">
-                                <div class="left_block_my_project">
-                                    <div class="name_my_projects">TeamMate. сервис для соискателей и владельцев проектов в различных сферах жизни</div>
-                                </div>
-                                <div class="right_block_my_project">
-                                    <div class="deadline_my_projects">Срок сдачи: 30.05.2020 </div>
-                                    <div class="strength_my_projects">Численность команды: 4/4</div>
-                                </div>
-                            </div>
-                            <div class="line_my_projects line_in_progress"></div>
+                        <div class="information_of_project">
+                            <span>Описание проекта*</span>
+                            <input id="information_of_project" type="text">
+                        </div>
+                        <div class="city">
+                            <span>Город*</span>
+                            <input id="city" type="text">
+                        </div>
+                        <div class="company">
+                            <span>Организация</span>
+                            <input id="company" type="text"/>
+                        </div>
+                        <div class="date_success" >
+                            <span>Дата сдачи проекта</span>
+                            <input id="company" type="date"/>
                         </div>
                     </div>
+                    
+                    <button id="button_log_up">Сохранить</button>
                 </form>
             </div>
         </div>

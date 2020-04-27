@@ -1,61 +1,10 @@
 $(function (){
-    $(window).resize(function(){
-        location.reload();
-    });
-    main_menu();
     set_scroll_height('.personal_left_block');
     set_scroll_height('.personal_right_block');
 
     //create_personal_information();
     test();
-    exit();
 });
-
-function main_menu()
-{ 
-    /*
-    $('.open_main_menu').click(function() {
-        $('.main_menu').hide();
-        $('.main_menu').fadeIn(1000);
-    });
-    */
-   $('.open_main_menu').click(function() {
-        if(!$('.main_menu').hasClass('openDone'))
-        {
-            $('.main_menu').addClass('openDone');
-            $('.main_menu').fadeOut(500);
-            $('.open_main_menu').text("Показать меню");
-        }
-        else
-        {
-            $('.main_menu').removeClass('openDone');
-            $('.main_menu').fadeIn(500);
-            $('.open_main_menu').text("Скрыть меню");
-        }
-    });
-    /*
-    $('.open_main_menu').click(function() {
-        if(!$('.main_menu').hasClass('openDone'))
-        {
-            $('.main_menu').addClass('openDone');
-            $('.main_menu').css("left", "-50%");
-            $('.open_main_menu').text("Показать меню");
-        }
-        else
-        {
-            $('.main_menu').removeClass('openDone');
-            $('.main_menu').css("left", "0%");
-            $('.open_main_menu').text("Скрыть меню");
-        }
-    });
-    */
-}
-
-function exit(){
-    $('#button_exit').click(function() {
-        location.href = '../../';
-    });
-}
 
 function test()
 {
