@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Соискатели</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../job_seekers/js/job_seekers.js"></script>
+    <script src="../../js/main_menu.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../job_seekers/css/job_seekers.css">
+    <link rel="stylesheet" href="../../stylesheets/left_main_menu.css">
+    <link rel="stylesheet" href="../../stylesheets/background.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="background_crystal">
+                <form class="form_job_seekers" onsubmit="return false;">
+                    <button class="open_main_menu ">Скрыть меню</button>
+                    <div class="main_menu">
+                        <div class="main_menu_logo">
+                            <span id="char_T" class="style_of_text">T</span>
+                            <span id="char_eam" class="style_of_text">eam</span>
+                            <span id="char_M" class="style_of_text">M</span>
+                            <span id="char_ate" class="style_of_text">ate</span>
+                        </div>
+                        <div class="main_menu_projects">
+                            <span class="style_of_text" id="main_menu_projects">Проекты</span>
+                        </div>
+                        <a id="href_all_projects" class="style_of_text">● Все проекты</a>
+                        <a id="href_my_projects" class="style_of_text">● Мои проекты</a>
+                        <a id="href_my_participation" class="style_of_text">● Моё участие</a>
+                        <div class="main_menu_people">
+                            <span class="style_of_text" id="main_menu_people">Люди</span>
+                        </div>
+                        <a id="href_job_seekers" class="style_of_text">● Соискатели</a>
+                        <a id="href_personal_area" class="style_of_text">● Моя страница</a>
+                        <button class="style_of_text" id="button_Settings">Настройки профиля</button>
+                        <button class="style_of_text" id="button_exit">Выход</button>
+                    </div>
+                    <div class="form_seekers">
+                        <div class="header_block">
+                            <span class="style_of_text">Сортировать по: </span>
+                            <button class="sort_rating">Рейтингу</button>
+                            <button class="sort_count_project">Числу проектов</button>
+                        </div>
+                        <div class="view_seekers">
+                            <div class="all_seekers">
+                               <div class="block_seekers">
+                                   <img src="" alt="Avatar" id="image_seeker">
+                                   <div id="name_seeker">Dmitry Borutya</div>
+                                   <div id="count_project_seeker">Проектов: 6</div>
+                                   <div id="rating_seeker">*****</div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

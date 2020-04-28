@@ -1,0 +1,71 @@
+.form_job_seekers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_seekers{
+    width: 800px;
+    position: absolute;
+    top: 0%;
+}
+
+.view_seekers{
+    display: flex;
+    flex-direction: column; 
+    overflow: auto;
+    margin-left: 5%;
+}
+
+.header_block{
+    border-bottom-style: solid;
+    border-bottom-color: #5262F2;
+    background: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.header_block button{
+    height: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.sort_rating{
+    background: #FCC400;
+}
+
+.sort_count_project{
+    background: #5262F2;
+}
+
+.all_seekers div{
+    padding: 10px;
+}
+
+.block_seekers{
+    display: flex;
+    width: 700px;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#image_seeker{
+    max-width: 55px;
+    max-height: 55px;
+}
+
+#count_project_seeker{
+    border-radius: 10px;
+    color: #FFFFFF;
+    background: #5262F2;
+}
+
+#rating_seeker{
+    float: rigth;
+}

@@ -1,14 +1,13 @@
 $(function (){
   get_red_stars();
-  get_required();
- 
-  $('#button_log_up').click(function(){
-    click_log_up();
+  set_scroll_height('.background_crystal');
+  $('#button_save').click(function(){
+    click_button_save();
   });
 });
 
 var data_log_up = {};
-function click_log_up()
+function click_button_save()
 {
   get_personal_data();
   get_education();
@@ -50,12 +49,18 @@ function click_log_up()
     }
   });
 
-  //alert(JSON.stringify(data_log_up));
- // alert(data_log_up.files);
 }
 
 function get_red_stars(){
   $('span:contains("*")').css('color', 'red');
+}
+
+//установить высоту блока для скролла
+function set_scroll_height(block) {
+  //получаем высоту страницы
+  var h_all = $(document).outerHeight(true);
+  //устанавливаем высоту блока для прокрутки
+  $(block).css('height', h_all);
 }
 
 function get_required()
@@ -72,39 +77,7 @@ function get_required()
 
 function get_new_educatin()
 {
-  /*
-  'use strict'; // Обязательно в начале документа
-  var k = `
-    <div class="education">
-      <span>Образование</span>
-      <div class="country">
-          <span>Страна</span>
-          <input id="country" type="text">
-      </div>
-      <div class="city">
-          <span>Город</span>
-          <input id="city" type="text">
-      </div>
-      <div class="university">
-          <span>Вуз</span>
-          <input id="university" type="text">
-      </div>
-      <div class="specialty">
-          <span>Специальность</span>
-          <input id="specialty" type="text">
-      </div>
-      <div class="learning_peroid">
-          <span>Срок обучаемости</span>
-          <input id="learning_peroid_from" type="text">
-          <span class="dash">-</span>
-          <input id="learning_peroid_to" type="text">
-          <button id="button_add_education">Добавить Образование</button>
-      </div>
-    </div>`;
-  $('.about_me').before(k);
-  */
   var new_education = $('#specialty').val(); 
-  //$('.learning_peroid').after(new_education);
   $('.all_educations')
   .append($('<span>',{
     text: new_education

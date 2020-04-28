@@ -8,6 +8,7 @@ $(function (){
     my_participation();
     job_seekers();
     personal_area();
+    settings();
     exit();
 });
 
@@ -20,6 +21,12 @@ function exit(){
 function all_projects(){
     $('#href_all_projects').click(function() {
        location.href = '../all_projects/';
+    });
+}
+
+function settings(){
+    $('#button_Settings').click(function() {
+       location.href = '../log_up/';
     });
 }
 

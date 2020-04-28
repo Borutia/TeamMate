@@ -40,32 +40,66 @@
                         <button class="style_of_text" id="button_Settings">Настройки профиля</button>
                         <button class="style_of_text" id="button_exit">Выход</button>
                     </div>
-
-                    <div class="about_project">
-                        <span id="span_about_project">О проекте</span>
-                        <div class="name_of_project">
-                            <span >Название*</span>
-                            <input id="name_of_project" type="text" >
+                    <div class="flex_blocks">
+                        <div class="about_project">
+                            <span id="span_name_block">О проекте</span>
+                            <div class="name_of_project">
+                                <span >Название*</span>
+                                <input id="name_of_project" type="text" >
+                            </div>
+                            <div class="information_of_project">
+                                <span>Описание проекта*</span>
+                                <input id="information_of_project" type="text">
+                            </div>
+                            <div class="city">
+                                <span>Город*</span>
+                                <input id="city" type="text">
+                            </div>
+                            <div class="company">
+                                <span>Организация</span>
+                                <input id="company" type="text"/>
+                            </div>
+                            <div class="date_success" >
+                                <span>Дата сдачи проекта</span>
+                                <input id="company" type="date"/>
+                            </div>
                         </div>
-                        <div class="information_of_project">
-                            <span>Описание проекта*</span>
-                            <input id="information_of_project" type="text">
+                        <div class="requirements_for_candidates">
+                            <span id="span_name_block">Требования к кандидатам</span>
+                            <div class="personal_qualities">
+                                <span >Личные качества</span>
+                                <input id="personal_qualities" type="text" >
+                            </div>
+                            <div class="professional_skills">
+                                <span>Профессиональные навыки</span>
+                                <input id="professional_skills" type="text">
+                            </div>
+                            <div class="team_size">
+                                <span>Численность команды</span>
+                                <input id="team_size" type="text">
+                            </div>
                         </div>
-                        <div class="city">
-                            <span>Город*</span>
-                            <input id="city" type="text">
-                        </div>
-                        <div class="company">
-                            <span>Организация</span>
-                            <input id="company" type="text"/>
-                        </div>
-                        <div class="date_success" >
-                            <span>Дата сдачи проекта</span>
-                            <input id="company" type="date"/>
-                        </div>
+                        <div class="required_resources">
+                                <span id="span_name_block">Требуемые ресурсы</span>
+                                <div class="resource_time">
+                                    <span >Время</span>
+                                    <input id="resource_time" type="text" >
+                                </div>
+                                <div class="resources_mobility">
+                                    <span>Мобильность</span>
+                                    <input id="resources_mobility" type="text">
+                                </div>
+                                <div class="resources_material">
+                                    <span>Материальные</span>
+                                    <input id="resources_material" type="text">
+                                </div>
+                                <div class="resources_cash">
+                                    <span>Денежные</span>
+                                    <input id="resources_cash" type="text">
+                                </div>
+                            </div>
                     </div>
-                    
-                    <button id="button_log_up">Сохранить</button>
+                    <button id="button_save">Сохранить</button>
                 </form>
             </div>
         </div>
