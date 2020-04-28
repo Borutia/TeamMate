@@ -60,9 +60,10 @@ function click_log_in()
             },
             success: function(data){
                 //var jsonData = JSON.stringify(data);
-                //var jsonData = $.parseJSON(jsonData);
+               // var jsonData = $.parseJSON(data);
                 if (data == 'Получены куки для аутентификации') { 
-                    location.href = '../data/view/personal_area/';
+                    location.href = '../data/view/personal_area/id';// + data.id;
+                    //alert(data.id);
                 } 
                 else { 
                     alert('Неправильный логин или пароль');

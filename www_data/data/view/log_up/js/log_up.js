@@ -3,9 +3,11 @@ $(function (){
   get_red_stars();
   get_required();
   
+  /*
   $('#button_add_education').click(function(){
     get_new_educatin();
   });
+  */
  
   $('#button_log_up').click(function(){
     click_log_up();
@@ -15,22 +17,32 @@ $(function (){
 var data_log_up = {};
 function click_log_up()
 {
-  get_personal_data();
-  get_education();
-  get_about_me();
+  //get_personal_data();
+  //get_education();
+  //get_about_me();
   get_personal_area();
 
-  var log_in_url = '../../engine/123.php';
+  var log_up_url = 'http://127.0.0.1:8000/auth/login/register/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
 
   $.ajax({
     type: 'POST',
-    url: log_in_url,
-    dataType: 'json',
+    url: log_up_url,
+    dataType: 'text',
     timeout: log_in_timeout,
     data: JSON.stringify(data_log_up),
+    success: function(data){
+      //var jsonData = JSON.stringify(data);
+      //var jsonData = $.parseJSON(jsonData);
+      if (data == 'Registraion faild') { 
+        alert('Ошибка регистрации');
+      } 
+      else { 
+        location.href = '../data/';
+      }
+    },
     error: function(request, error){
         if (error == "timeout") {
             alert(log_in_error_timeout);
@@ -38,25 +50,11 @@ function click_log_up()
         else {
             alert(log_in_error_default);
         }
-    },
-    success: function(data){
-        var jsonData = JSON.stringify(data);
-        var jsonData = $.parseJSON(jsonData);
-        if (jsonData.success == "1")
-        {
-          alert('Регистрация прошла успешно!');
-          location.href = '../data/';
-        }
-        else
-        {
-          alert('Такие данные уже есть!' + "\n"
-                + 'Повторите попытку.');
-        }
     }
   });
 
-  //alert(JSON.stringify(data_log_up));
- // alert(data_log_up.files);
+  alert(JSON.stringify(data_log_up));
+  //alert(data_log_up);
 }
 
 function get_personal_data()
@@ -88,16 +86,14 @@ function get_about_me()
 
 function get_personal_area()
 {
-  data_log_up['login'] = $('#login').val();
-  data_log_up['e_mail'] = $('#e_mail').val();
-  data_log_up['phone'] = $('#phone').val();
+  data_log_up['username'] = $('#login').val();
+  data_log_up['email'] = $('#e_mail').val();
+  //data_log_up['phone'] = $('#phone').val();
   data_log_up['password'] = $('#password').val();
  
-  var file_data = $('#button_add_photo').prop('files')[0];
-
-  data_log_up['files'] = file_data;
-
-  alert(file_data);
+  //var file_data = $('#button_add_photo').prop('files')[0];
+  //data_log_up['files'] = file_data;
+  //alert(file_data);
 }
 
 function get_gender()

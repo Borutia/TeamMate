@@ -1,10 +1,61 @@
 $(function (){
     set_scroll_height('.personal_left_block');
     set_scroll_height('.personal_right_block');
-
-    //create_personal_information();
-    test();
+    get_personal_infomation();
+    //test();
 });
+
+function get_personal_infomation(){
+    var log_in_url = 'http://127.0.0.1:8000/profile/';
+    var log_in_timeout = 10000;
+    var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
+    var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
+    var user_id ;
+    $.ajax({
+        type: 'POST',
+        url: log_in_url,
+        dataType: JSON,
+        timeout: log_in_timeout,
+        data: { 
+            'id': user_id 
+        },
+        success: function(data){
+            //var jsonData = JSON.stringify(data);
+            //var jsonData = $.parseJSON(jsonData);
+            create_personal_information(data);
+        },
+        error: function(request, error){
+            if (error == "timeout") {
+                alert(log_in_error_timeout);
+            }
+            else {
+                alert(log_in_error_default);
+            }
+        }
+    });   
+}
+
+function create_personal_information(data){
+    //left block
+    'use strict'; 
+    $('#avatar').attr("src","../../image/avatar_test.jpg" );
+    $('#name_of_person').text(data.name + ' ' + data.family);
+    $('#login_of_person').text("@" + data.user);
+    $('#personal_position').text(data.personal_quality.quality);
+    $('#personal_birthday').text("Дата Рождения: " + data.birthday);
+    $('.personal_education').append(educations);
+
+    $('.personal_education')
+        .append($('<span class="style_of_text">',{
+            text: data.education.ed_start + '-' + data.education.ed_end + 
+            ' ' + data.education.vuz + ' ' + data.education.specialty
+    }));    
+
+    $('.personal_jobs')
+    .append($('<span class="style_of_text">',{
+        text: data.work_place
+    }));    
+}
 
 function test()
 {
