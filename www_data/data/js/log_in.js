@@ -127,7 +127,7 @@ function click_log_in()
                 var jsonData2 = $.parseJSON(data);
                 alert(jsonData + jsonData2);
                 //$.cookie('id', jsonData.id);
-                location.href = './www_data/data/view/personal_area/';
+               // location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);
                // var jsonData = $.parseJSON(data);
