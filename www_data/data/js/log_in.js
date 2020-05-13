@@ -2,7 +2,10 @@ $(function(){
     $('#button_log_in').click(function(){
         click_log_in();
     });
-    reset_password();
+    window_reset_password();
+    $('#button_reset_password').click(function(){
+        reset_password();
+    });
       //  test();
     /*
     //обработка нажатия Enter в полях ввода логина и пароля
@@ -14,7 +17,11 @@ $(function(){
     */
 });
 
-function reset_password()
+function reset_password(){
+
+}
+
+function window_reset_password()
 {
         $('a.myLinkModal').click( function(event){
             event.preventDefault();
