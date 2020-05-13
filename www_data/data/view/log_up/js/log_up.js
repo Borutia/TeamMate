@@ -35,7 +35,7 @@ function click_log_up()
   //get_work_place();
   get_personal_area();
 
-  var log_up_url = 'http://127.0.0.1:8000/auth/login/register/';
+  var log_up_url = 'https://teammateru.herokuapp.com/auth/login/register/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
