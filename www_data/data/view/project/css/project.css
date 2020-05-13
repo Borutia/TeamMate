@@ -138,17 +138,17 @@
     flex: 1;
 }
 
-#avatar_review{
+#avatar_review {
     min-width: 50px;
     min-height: 55px;
     max-width: 50px;
     max-height: 55px;
 }
 
-.personal_people{
+.personal_review,.personal_people{
     margin-bottom: 3%;
 }   
-.personal_people div{
+.personal_review,.personal_people div{
     width: 96%;
     border-radius: 10px;
     font-size: 16px;
