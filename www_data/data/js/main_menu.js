@@ -14,8 +14,8 @@ $(function (){
 
 function exit(){
     $('#button_exit').click(function() {
-        //$.removeCookie('id');
-        $.cookie('id',null);
+        $.removeCookie('id');
+        //$.cookie('id', null);
         location.href = '../../../../';
     });
 }
