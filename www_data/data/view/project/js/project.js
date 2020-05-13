@@ -6,6 +6,9 @@ $(function (){
     var reviews_managers1 = `<div ">Ужасный сотрудник во всех аспектах</div> `;
     $('.left_block_per_review').append(name_review);
     $('.right_block_per_review').append(reviews_managers1);
+    
+    $('.left_block_per_review').append(name_review);
+    $('.right_block_per_review').append(reviews_managers1);
 });
 
 function set_attachment()

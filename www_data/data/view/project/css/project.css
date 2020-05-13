@@ -139,16 +139,16 @@
 }
 
 #avatar_review{
-    min-width: 70px;
-    min-height: 75px;
-    max-width: 70px;
-    max-height: 75px;
+    min-width: 50px;
+    min-height: 55px;
+    max-width: 50px;
+    max-height: 55px;
 }
 
-.personal_reviews_managers{
+.personal_people{
     margin-bottom: 3%;
 }   
-.personal_reviews_managers div{
+.personal_people div{
     width: 96%;
     border-radius: 10px;
     font-size: 16px;
