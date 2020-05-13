@@ -23,7 +23,9 @@ $(function (){
 });
 
 function get_personal_infomation(){
-    var user_id = $.cookie('id');
+    if ( $.cookie('id') != null ) {
+        var user_id = $.cookie('id');
+    }      
     var get_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
     var get_timeout = 10000;
     var get_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
