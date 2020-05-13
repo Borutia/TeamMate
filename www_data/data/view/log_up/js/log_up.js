@@ -53,7 +53,7 @@ function click_log_up()
         alert('Ошибка регистрации');
       } 
       else { 
-        location.href = '../../';
+        location.href = './';
       }
     },
     error: function(request, error){

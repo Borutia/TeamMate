@@ -123,9 +123,9 @@ function click_log_in()
                 'password': password
             },
             success: function(data){
-                var jsonData = JSON.stringify(data);
-                var jsonData2 = $.parseJSON(data);
-                alert(jsonData + jsonData2);
+                //var jsonData = JSON.stringify(data);
+                alert(data.user_id)
+
                 //$.cookie('id', jsonData.id);
                // location.href = './www_data/data/view/personal_area/';
                 /*
