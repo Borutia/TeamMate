@@ -40,18 +40,6 @@ function reset_password(){
                       $(this).css('display', 'none');
                       $('#myOverlay').fadeOut(297);
                       });
-                //location.href = './www_data/data/';
-                /*
-                //var jsonData = JSON.stringify(data);
-               // var jsonData = $.parseJSON(data);
-                if (data == 'Получены куки для аутентификации') { 
-                    $.cookie('id', data.id);
-                    location.href = './www_data/data/view/personal_area/';
-                } 
-                else { 
-                    alert('Неправильный логин или пароль');
-                }
-                */
             },
             error: function(request, error){
                 if (error == "timeout") {
@@ -135,7 +123,9 @@ function click_log_in()
                 'password': password
             },
             success: function(data){
-                $.cookie('id', data.id);
+                alert(data);
+                var jsonData = JSON.stringify(data);
+                $.cookie('id', jsonData.id);
                 location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);
