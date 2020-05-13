@@ -126,7 +126,7 @@ function click_log_in()
 
                 $.cookie('id', data.user_id);
                 $.cookie('TeamAuth', data.token);
-                //location.href = './www_data/data/view/personal_area/';
+                location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);
                // var jsonData = $.parseJSON(data);
