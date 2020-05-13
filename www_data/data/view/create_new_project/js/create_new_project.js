@@ -112,7 +112,8 @@ function click_button_save()
   get_about_project();
   get_requirements_for_candidates();
   get_required_resources();
-  var get_url = 'http://127.0.0.1:8000/project/';
+  var user_id = $.cookie('id');
+  var get_url = 'https://teammateru.herokuapp.com/project/' + user_id + '/';
   var get_timeout = 10000;
   var get_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var get_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
@@ -120,56 +121,56 @@ function click_button_save()
   $.ajax({
     type: 'POST',
     url: get_url,
-    dataType: json,
+    dataType: 'JSON',
     timeout: get_timeout,
-    data: JSON.stringify(data_project),
-    error: function(request, error){
-        if (error == "timeout") {
-            alert(get_error_timeout);
-        }
-        else {
-            alert(get_error_default);
-        }
-    },
+    data: data_project,
     success: function(data){
         //var jsonData = JSON.stringify(data);
         //var jsonData = $.parseJSON(jsonData);
-        if (jsonData.success == "project save")
-        {
-          alert('good');
-          location.href = '../data/view/personal_area/';
-        }
-        else
-        {
-          alert('Такие данные уже есть!' + "\n"
-                + 'Повторите попытку.');
-        }
+        alert('good');
+        location.href = '../data/view/my_projects/';
+    },
+    error: function(request, error){
+      if (error == "timeout") {
+          alert(get_error_timeout);
+      }
+      else {
+          alert(get_error_default);
+      }
     }
   });
 }
 
 function get_about_project()
 {
-  data_project['name_of_project'] = $('#name_of_project').val();
-  data_project['information_of_project'] = $('#information_of_project').val();
-  data_project['city'] = $('#city').val();
-  data_project['company'] = $('#company').val();
-  data_project['data_success'] = $('#data_success').val();
+  data_project['project_name'] = $('#name_of_project').val();
+  data_project['dsc'] = $('#information_of_project').val();
+  data_project['town'] = $('#city').val();
+  data_project['organization'] = $('#company').val();
+  data_project['deadline'] = $('#data_success').val();
 }
 
 function get_requirements_for_candidates()
 {
-  data_project['personal_qualities'] = $('#personal_qualities').val();
-  data_project['professional_skills'] = $('#professional_skills').val();
+  let project_quality = { };
+  project_quality['quality'] = $('#personal_qualities').val();
+  data_project['project_quality'] = project_quality;
+
+  let project_skill = { };
+  project_skill['skill'] = $('#professional_skills').val();
+  data_project['project_skill'] = project_skill;
+ 
   data_project['team_size'] = $('#team_size').val();
 }
 
 function get_required_resources()
 {
-  data_project['resource_time'] = $('#resource_time').val();
-  data_project['resources_mobility'] = $('#resources_mobility').val();
-  data_project['resources_material'] = $('#resources_material').val();
-  data_project['resources_cash'] = $('#resources_cash').val();
+  let project_resources = { };
+  project_resources['resource_time'] = $('#resource_time').val();
+  project_resources['resources_mobility'] = $('#resources_mobility').val();
+  project_resources['resources_material'] = $('#resources_material').val();
+  project_resources['resources_cash'] = $('#resources_cash').val();
+  data_project['project_resources'] = project_resources;
 }
 
 function get_red_stars(){

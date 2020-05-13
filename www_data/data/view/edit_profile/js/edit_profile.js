@@ -49,7 +49,7 @@ $(function (){
 function get_information()
 {
   var user_id = $.cookie('id');
-  var log_up_url = 'http://127.0.0.1:8000/profile/' + user_id + '/';
+  var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
@@ -62,12 +62,7 @@ function get_information()
     success: function(data){
       //var jsonData = JSON.stringify(data);
       //var jsonData = $.parseJSON(jsonData);
-      if (data == 'faild') { 
-        alert('Ошибка загрузки');
-      } 
-      else { 
-        output_information(data);
-      }
+      output_information(data);
     },
     error: function(request, error){
         if (error == "timeout") {
@@ -83,11 +78,11 @@ function get_information()
 function output_information(data){
   $('#sername').text(data.family);
   $('#name').text(data.name);
+  $('#patronymic').text(data.middle_name);
+  $('#birthday').text(data.birthday);
+  $('#gender').text(data.sex);
+  $('#current_city').text(data.town);
   /*
-  data['middle_name'] = $('#patronymic').val();
-  data['birthday'] = $('#birthday').val();
-  data['sex'] = $('#gender').val();
-  data['town'] = $('#current_city').val();
 
   data['ed_country'] = $('#education_country').val();
   data['ed_town'] = $('#education_city').val();
@@ -123,7 +118,7 @@ function click_button_save()
   //get_work_place();
   get_personal_area();
   var user_id = $.cookie('id');
-  var log_up_url = 'http://127.0.0.1:8000/profile/' + user_id + '/';
+  var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
@@ -137,12 +132,7 @@ function click_button_save()
     success: function(data){
       //var jsonData = JSON.stringify(data);
       //var jsonData = $.parseJSON(jsonData);
-      if (data == 'faild') { 
-        alert('Ошибка записи');
-      } 
-      else { 
-        location.href = '../../';
-      }
+      location.href = '../../';
     },
     error: function(request, error){
         if (error == "timeout") {

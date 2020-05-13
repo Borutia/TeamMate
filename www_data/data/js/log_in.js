@@ -2,6 +2,7 @@ $(function(){
     $('#button_log_in').click(function(){
         click_log_in();
     });
+    reset_password();
       //  test();
     /*
     //обработка нажатия Enter в полях ввода логина и пароля
@@ -12,6 +13,27 @@ $(function(){
     });
     */
 });
+
+function reset_password()
+{
+        $('a.myLinkModal').click( function(event){
+            event.preventDefault();
+            $('#myOverlay').fadeIn(297,	function(){
+          $('#myModal') 
+          .css('display', 'block')
+          .animate({opacity: 1}, 198);
+            });
+        });
+    
+        $('#myModal__close, #myOverlay').click( function(){
+            $('#myModal').animate({opacity: 0}, 198,
+          function(){
+            $(this).css('display', 'none');
+            $('#myOverlay').fadeOut(297);
+            });
+        });
+
+}
 
 function test(){
     $('#button_log_in').click(function(){
