@@ -1,0 +1,126 @@
+.form_project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_information_project{
+    width: 800px;
+    position: absolute;
+    top: 0%;
+}
+
+.header_block{
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-color: #5262F2;
+    background: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_block_1{
+   flex: 6;
+}
+
+.header_block_1{
+    flex: 1;
+}
+
+#header_progress{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #FCC400;
+}
+
+.information_about_project{
+    display: flex;
+    flex-direction: column;  
+    overflow: auto;
+}
+
+.information_about_project div{
+    padding: 10px;
+}
+
+.about_project{
+    width: 96%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+.city_organization_date_success{
+    display: flex;
+    justify-content: space-around;
+}
+
+.attachment{
+    display: flex;
+    margin-left: -20px;
+}
+
+.attachment div{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 20px;
+    background: #FFFFFF;
+}
+
+.attachment img{
+    max-width: 30px;
+    min-width: 30px;
+    max-height: 20px;
+    min-height: 20px;
+}
+
+.professional_skills span{
+    font-size: 20px;
+    background: #5EC939;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 1%;
+    margin-bottom: 1%;
+    display: inline-flex;
+}
+
+.personal_qualities span{
+    font-size: 20px;
+    background: #FCC400;
+    border-radius: 10px;
+    margin: 1%;
+    margin-bottom: 1%;
+    padding: 5px;
+    display: inline-flex;
+}
+
+.required_resources{
+    display: flex;
+    justify-content: space-around;
+}
+
+.blocks{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    
+}
+
+.blocks div{
+    min-width: 160px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+

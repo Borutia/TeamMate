@@ -14,6 +14,7 @@ $(function (){
 
 function exit(){
     $('#button_exit').click(function() {
+        $.cookie('id', null);
         location.href = '../../';
     });
 }
@@ -26,7 +27,7 @@ function all_projects(){
 
 function settings(){
     $('#button_Settings').click(function() {
-       location.href = '../log_up/';
+       location.href = '../edit_profile/';
     });
 }
 
@@ -49,7 +50,7 @@ function job_seekers(){
 }
 
 function personal_area(){
-    $('#href_personal_area').click(function() {
+    $('#href_personal_area').click(function() { 
        location.href = '../personal_area/';
     });
 }

@@ -18,6 +18,10 @@
     padding: 10px;
 }
 
+button:focus {
+    outline: none;
+}
+
 .about_project div{
     padding: 10px;
 }
@@ -86,4 +90,103 @@ span{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 40px;
     margin-bottom: 30px ;
+}
+
+.add_professional_skills{
+    display: flex;
+}
+
+.add_professional_skills div{
+    color: #FFFFFF; 
+    background: #0F25ED;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+
+.add_personal_qualities{
+    display: flex;
+}
+
+.add_personal_qualities div{
+    color: #FFFFFF; 
+    background: #0F25ED;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.add_resource_time{
+    display: flex;
+}
+
+.add_resource_time div{
+    color: #FFFFFF; 
+    background: #0F25ED;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.add_resources_mobility{
+    display: flex;
+}
+
+.add_resources_mobility div{
+    color: #FFFFFF; 
+    background: #0F25ED;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.add_resources_material{
+    display: flex;
+}
+
+.add_resources_material div{
+    color: #FFFFFF; 
+    background: #0F25ED;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.add_resources_cash{
+    display: flex;
+}
+
+.add_resources_cash div{
+    color: #FFFFFF; 
+    background: #0F25ED;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+
+.button_add{
+    margin-left: 395px;
+    width: 232px;
+    height: 36px;
+    font-family: Tinos;
+    font-size: 18px;
+    color: #0F25ED;
+    background: #FFFFFF;
+    border: 1px solid rgba(82, 98, 242, 0.5);
+    box-sizing: border-box;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }

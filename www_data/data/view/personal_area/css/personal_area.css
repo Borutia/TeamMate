@@ -65,6 +65,13 @@
     border: 1px solid #5EC939;
 }
 
+#avatar_review{
+    min-width: 70px;
+    min-height: 75px;
+    max-width: 70px;
+    max-height: 75px;
+}
+
 #personal_position{
     margin-bottom: 5%;
 }
@@ -184,14 +191,32 @@
 
 .personal_reviews_managers{
     margin-bottom: 3%;
+}   
+
+.add_personal_reviews_managers{
+    display: flex;
+    
+}
+
+.right_block_per_reviews_manager{
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.left_block_per_reviews_manager{
+    flex: 1;
 }
 
 .personal_reviews_managers div{
     width: 96%;
-    background: #FFFFFF;
     border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 2%;
+    font-size: 16px;
+}
+
+.review_manager{
+    color: #FFFFFF;
 }
 
 .personal_reviews_managers .negative{
@@ -205,9 +230,41 @@
     margin-bottom: 3%;
 }
 
-.personal_peer_review div{
+.rating {
     width: 96%;
     background: #FFFFFF;
     font-size: 20px;
     margin-bottom: 2%;
+    border-radius: 10px;
+}
+
+.left {
+float: left;
+}
+
+.rating .stars {
+margin-right: 15px;
+}
+
+.rating .stars .star {
+padding: 5px 2px;
+cursor: pointer;
+float: left;
+}
+
+.rating .stars .star:before {
+font-family: 'FontAwesome';
+content: '\f005';
+color: #d0e8f0;
+font-size: 30px;
+}
+
+.rating .stars .star:hover:before,
+.rating .stars .star.to_rate:before,
+.rating .stars .star.rated:before {
+color: #f0b111;
+}
+
+.rating .stars .star.no_to_rate:before {
+color: #d0e8f0;
 }

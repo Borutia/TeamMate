@@ -7,7 +7,8 @@
     <script src="../create_new_project/js/create_new_project.js"></script>
     <script src="../../js/main_menu.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>    <script src="../log_up/js/log_up.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>   
+    <script src="../../js/jquery.cookie.js"></script>
     <link rel="stylesheet" href="../create_new_project/css/create_new_project.css">
     <link rel="stylesheet" href="../../stylesheets/left_main_menu.css">
     <link rel="stylesheet" href="../../stylesheets/background.css">
@@ -61,7 +62,7 @@
                             </div>
                             <div class="date_success" >
                                 <span>Дата сдачи проекта</span>
-                                <input id="company" type="date"/>
+                                <input id="data_success" type="date"/>
                             </div>
                         </div>
                         <div class="requirements_for_candidates">
@@ -70,10 +71,15 @@
                                 <span >Личные качества</span>
                                 <input id="personal_qualities" type="text" >
                             </div>
+                            <button class="button_add" id="button_add_personal_qualities">Добавить</button>
+                            <div class="add_personal_qualities"></div>
+
                             <div class="professional_skills">
                                 <span>Профессиональные навыки</span>
                                 <input id="professional_skills" type="text">
                             </div>
+                            <button class="button_add" id="button_add_professional_skills">Добавить</button>
+                            <div class="add_professional_skills"></div>
                             <div class="team_size">
                                 <span>Численность команды</span>
                                 <input id="team_size" type="text">
@@ -85,18 +91,26 @@
                                     <span >Время</span>
                                     <input id="resource_time" type="text" >
                                 </div>
+                                <button class="button_add" id="button_add_resource_time">Добавить</button>
+                                <div class="add_resource_time"></div>
                                 <div class="resources_mobility">
                                     <span>Мобильность</span>
                                     <input id="resources_mobility" type="text">
                                 </div>
+                                <button class="button_add" id="button_add_resources_mobility">Добавить</button>
+                                <div class="add_resources_mobility"></div>
                                 <div class="resources_material">
                                     <span>Материальные</span>
                                     <input id="resources_material" type="text">
                                 </div>
+                                <button class="button_add" id="button_add_resources_material">Добавить</button>
+                                <div class="add_resources_material"></div>
                                 <div class="resources_cash">
                                     <span>Денежные</span>
                                     <input id="resources_cash" type="text">
                                 </div>
+                                <button class="button_add" id="button_add_resources_cash">Добавить</button>
+                                <div class="add_resources_cash"></div>
                             </div>
                     </div>
                     <button id="button_save">Сохранить</button>

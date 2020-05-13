@@ -2,7 +2,7 @@ $(function(){
     $('#button_log_in').click(function(){
         click_log_in();
     });
-        //test();
+      //  test();
     /*
     //обработка нажатия Enter в полях ввода логина и пароля
     $("#login, #password").keydown(function (e) {
@@ -19,7 +19,10 @@ function test(){
     var password = $('#password').val();
     if(login === "admin" && password === "admin")
     {
-       // location.href = '../data/view/personal_area/';
+        location.href = '../data/view/personal_area/';
+    }
+    else{
+        alert('error!');
     }
 });
 }
@@ -53,6 +56,7 @@ function click_log_in()
             type: 'POST',
             url: log_in_url,
             dataType: 'text',
+            //dataType: 'JSON',
             timeout: log_in_timeout,
             data: { 
                 'username': login, 
@@ -62,12 +66,12 @@ function click_log_in()
                 //var jsonData = JSON.stringify(data);
                // var jsonData = $.parseJSON(data);
                 if (data == 'Получены куки для аутентификации') { 
-                    location.href = '../data/view/personal_area/id';// + data.id;
-                    //alert(data.id);
+                    $.cookie('id', '4');//тест куки
+                    //$.cookie('id', data.id);
+                    location.href = '../data/view/personal_area/';
                 } 
                 else { 
                     alert('Неправильный логин или пароль');
-                    //location.href = '../data/view/personal_area/';
                 }
             },
             error: function(request, error){

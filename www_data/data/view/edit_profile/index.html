@@ -2,10 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Регистрация</title>
+    <title>Редактировать профиль</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../log_up/js/log_up.js"></script>
-    <link rel="stylesheet" href="../log_up/css/log_up.css">
+    <script src="../edit_profile/js/edit_profile.js"></script>
+    <script src="../../js/main_menu.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../../stylesheets/left_main_menu.css">
+    <link rel="stylesheet" href="../edit_profile/css/edit_profile.css">
     <link rel="stylesheet" href="../../stylesheets/background.css">
 </head>
 
@@ -15,6 +18,28 @@
             <div class="background_crystal">
                 <form class="form_sign_up" onsubmit="return false;">
                     <div class="flex_blocks">
+                        <button class="open_main_menu ">Скрыть меню</button>
+                        <div class="main_menu">
+                            <div class="main_menu_logo">
+                                <span id="char_T" class="style_of_text">T</span>
+                                <span id="char_eam" class="style_of_text">eam</span>
+                                <span id="char_M" class="style_of_text">M</span>
+                                <span id="char_ate" class="style_of_text">ate</span>
+                            </div>
+                            <div class="main_menu_projects">
+                                <span class="style_of_text" id="main_menu_projects">Проекты</span>
+                            </div>
+                            <a id="href_all_projects" class="style_of_text">● Все проекты</a>
+                            <a id="href_my_projects" class="style_of_text">● Мои проекты</a>
+                            <a id="href_my_participation" class="style_of_text">● Моё участие</a>
+                            <div class="main_menu_people">
+                                <span class="style_of_text" id="main_menu_people">Люди</span>
+                            </div>
+                            <a id="href_job_seekers" class="style_of_text">● Соискатели</a>
+                            <a id="href_personal_area" class="style_of_text">● Моя страница</a>
+                            <button class="style_of_text" id="button_Settings">Настройки профиля</button>
+                            <button class="style_of_text" id="button_exit">Выход</button>
+                        </div>
                         <div class="personal_data">
                             <span id="span_name_block">Личные данные</span>
                             <div class="sername">
@@ -137,7 +162,7 @@
                                 <input id="password" type="text">
                             </div>
                         </div>
-                        <button id="button_log_up">Регистрация</button>
+                        <button id="button_save">Сохранить</button>
                     </div>
                 </form>
             </div>
