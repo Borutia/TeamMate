@@ -18,7 +18,51 @@ $(function(){
 });
 
 function reset_password(){
-
+    var log_in_url = 'https://teammateru.herokuapp.com/auth/login/sendnewpassword/';
+    var username = $('#input_reset_password').val();
+    var log_in_timeout = 10000;
+    var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
+    var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
+    
+    if(login != '' && password != '')
+    {
+        $.ajax({
+            type: 'POST',
+            url: log_in_url,
+            dataType: 'JSON',
+            timeout: log_in_timeout,
+            data: { 
+                'username': username, 
+            },
+            success: function(data){
+                $('#myModal').animate({opacity: 0}, 198,
+                    function(){
+                      $(this).css('display', 'none');
+                      $('#myOverlay').fadeOut(297);
+                      });
+                //location.href = './www_data/data/';
+                /*
+                //var jsonData = JSON.stringify(data);
+               // var jsonData = $.parseJSON(data);
+                if (data == 'Получены куки для аутентификации') { 
+                    $.cookie('id', data.id);
+                    location.href = './www_data/data/view/personal_area/';
+                } 
+                else { 
+                    alert('Неправильный логин или пароль');
+                }
+                */
+            },
+            error: function(request, error){
+                if (error == "timeout") {
+                    alert(log_in_error_timeout);
+                }
+                else {
+                    alert(log_in_error_default);
+                }
+            }
+        });
+    }
 }
 
 function window_reset_password()
