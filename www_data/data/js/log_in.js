@@ -123,10 +123,10 @@ function click_log_in()
                 'password': password
             },
             success: function(data){
-                alert(data);
                 var jsonData = JSON.stringify(data);
-                alert(jsonData);
-                $.cookie('id', jsonData.id);
+                var jsonData2 = $.parseJSON(data);
+                alert(jsonData + jsonData2);
+                //$.cookie('id', jsonData.id);
                 location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);
