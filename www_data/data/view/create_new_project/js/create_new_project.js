@@ -7,6 +7,7 @@ $(function (){
 
   $('#button_add_professional_skills').click(function(){
     click_add_professional_skills();
+    alert(project_quality);
   });
 
   $('#button_add_personal_qualities').click(function(){
@@ -28,18 +29,7 @@ $(function (){
   $('#button_add_resources_cash').click(function(){
     click_add_resources_cash();
   });
-
-  let project_quality = [];
-  for(let i=0;i<count_click_add_personal_qualities;i++)
-  {
-    let str = '.add_personal_qualities #' + i;
-    let info = $(str).val();
-    let temp = {
-      'quality': info
-    };
-    project_quality.push(temp);
-  }
-  alert(project_quality);
+ 
 });
 
 var count_click_add_resource_time = 0;
