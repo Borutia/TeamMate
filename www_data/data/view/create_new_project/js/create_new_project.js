@@ -7,7 +7,6 @@ $(function (){
 
   $('#button_add_professional_skills').click(function(){
     click_add_professional_skills();
-    alert(project_quality);
   });
 
   $('#button_add_personal_qualities').click(function(){
@@ -110,9 +109,9 @@ function click_add_personal_qualities(){
 var data_project = {};
 function click_button_save()
 {
-  get_about_project();
+  //get_about_project();
   get_requirements_for_candidates();
-  get_required_resources();
+  //get_required_resources();
   var user_id = $.cookie('id');
   var get_url = 'https://teammateru.herokuapp.com/project/' + user_id + '/';
   var get_timeout = 10000;
@@ -137,6 +136,7 @@ function click_button_save()
       }
     }
   });
+  alert(data_project);
 }
 
 function get_about_project()
