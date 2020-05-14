@@ -125,8 +125,13 @@ function click_log_in()
             success: function(data){
 
                 $.cookie('id', data.user_id);
-                $.cookie('TeamAuth', data.token);
-               // $.cookie("TeamAuth", data.token, { domain: "https://teammateru.herokuapp.com" });
+                //$.cookie('TeamAuth', data.token);
+                $.cookie("the_cookie", "the_value", {
+                    expires: 7,
+                    path: "/",
+                    domain: "jquery.com",
+                    secure: true
+                  });
                 location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);

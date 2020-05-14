@@ -68,8 +68,8 @@
 				encode(key), '=', stringifyCookieValue(value),
 				options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
 				options.path    ? '; path=' + options.path : '',
-				'https://teammateru.herokuapp.com'  ? '; domain=' + 'https://teammateru.herokuapp.com' : '',
-				//options.domain  ? '; domain=' + 'https://teammateru.herokuapp.com' : '',//options.domain : '',
+				//'https://teammateru.herokuapp.com'  ? '; domain=' + 'https://teammateru.herokuapp.com' : '',
+				options.domain  ? '; domain=' + options.domain : '',
 				options.secure  ? '; secure' : ''
 			].join(''));
 		}
