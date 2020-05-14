@@ -55,29 +55,36 @@ function get_personal_infomation(){
 
 function create_personal_information(data){
     'use strict'; 
-    $('#avatar').attr("src","../../image/avatar_test.jpg" );
+   // $('#avatar').attr("src","../../image/avatar_test.jpg" );
+    $('#avatar').attr("src", data.photo);
     $('#name_of_person').text(data.family + ' ' + data.name + ' ' + data.middle_name);
     $('#login_of_person').text("@" + data.user);
     //left block
-    $('#personal_position').text(data.personal_quality.quality);
+    //$('#personal_position').text(data.personal_quality.quality);
     $('#personal_birthday').text("Дата Рождения: " + data.birthday);
 
-    //учеба цикл?
-    $('.personal_education')
+    var space = '<br>';
+    //учеба 
+    for(let i=0;i<data.education.length;i++)
+    {
+        $('.personal_education')
         .append($('<span class="style_of_text">',{
             text: data.education.ed_start + '-' + data.education.ed_end + 
             ' ' + data.education.vuz + ' ' + data.education.specialty
-    }));   
-    var space = '<br>';
-    $('.personal_education').append(space);  
-
-    //места работы цикл?
-    $('.personal_jobs')
-    .append($('<span class="style_of_text">',{
-        text: data.work_place
-    }));    
-    $('.personal_jobs').append(space);  
-
+        }));   
+        $('.personal_education').append(space); 
+    }
+    
+    //места работы 
+    for(let i=0;i<data.work_place.length;i++)
+    {
+        $('.personal_jobs')
+        .append($('<span class="style_of_text">',{
+            text: data.work_place
+        }));    
+        $('.personal_jobs').append(space);  
+    }
+   
     //right block
     $('.personal_about_me').text(data.o_sebe);
 

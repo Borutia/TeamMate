@@ -6,17 +6,19 @@ $(function (){
 
 function get_projects()
 {
-    var get_url = '../../engine/123.php';
+    var get_url = 'https://teammateru.herokuapp.com/project/all/'
     var get_timeout = 10000;
     var get_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
-    var get_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
+    var get_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';  
     
     $.ajax({
-        type: 'POST',
+        type: 'GET',
         url: get_url,
-        dataType: json,
+        dataType: 'JSON',
         timeout: get_timeout,
-        data: JSON.stringify(data_log_up),
+        success: function(data){
+            set_projects(data);
+        },
         error: function(request, error){
             if (error == "timeout") {
                 alert(get_error_timeout);
@@ -24,25 +26,31 @@ function get_projects()
             else {
                 alert(get_error_default);
             }
-        },
-        success: function(data){
-            var jsonData = $.parseJSON(data);
-            set_projects(jsonData);
-            if (jsonData.success == "projects")
-            {
-              alert('good');
-            }
-            else
-            {
-              alert('Ошибка загрузки!' + "\n"
-                    + 'Повторите попытку.');
-            }
         }
-      });
+    }); 
+}
+
+function set_projects(data){
+    for(let i=0;i<data.count;i++)
+    {
+        get_one_project(data.result[i]);
+    }
 }
 
 
-function set_projects(data)
+function get_one_project(data)
 {
-    
+    'use strict'; 
+
+    var temp = '<div class="my_projects id='+ data.id +'">'+
+        '<div class="left_block_my_project">'+
+            '<div class="name_my_projects">'+ data.project_name +'</div>'+
+        '</div>'+
+        '<div class="right_block_my_project">'+
+            '<div class="deadline_my_projects">Срок сдачи: '+ data.deadline +'</div>'+
+            '<div class="strength_my_projects">Численность команды: '+ data.now_members +'/'+data.max_members +'</div>'+
+        '</div>'+
+    '</div>'+
+    '<div class="line_my_projects ">'+ data.status +'</div>';
+    $('.view_projects').append(temp);
 }

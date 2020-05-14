@@ -29,6 +29,17 @@ $(function (){
     click_add_resources_cash();
   });
 
+  let project_quality = [];
+  for(let i=0;i<count_click_add_personal_qualities;i++)
+  {
+    let str = '.add_personal_qualities #' + i;
+    let info = $(str).val();
+    let temp = {
+      'quality': info
+    };
+    project_quality.push(temp);
+  }
+  alert(project_quality);
 });
 
 var count_click_add_resource_time = 0;
@@ -125,9 +136,6 @@ function click_button_save()
     timeout: get_timeout,
     data: data_project,
     success: function(data){
-        //var jsonData = JSON.stringify(data);
-        //var jsonData = $.parseJSON(jsonData);
-        alert('good');
         location.href = '../data/view/my_projects/';
     },
     error: function(request, error){
@@ -152,8 +160,16 @@ function get_about_project()
 
 function get_requirements_for_candidates()
 {
-  let project_quality = { };
-  project_quality['quality'] = $('#personal_qualities').val();
+  let project_quality = [];
+  for(let i=0;i<count_click_add_personal_qualities;i++)
+  {
+    let str = '.add_personal_qualities #' + i;
+    let info = $(str).val();
+    let temp = {
+      'quality': info
+    };
+    project_quality.push(temp);
+  }
   data_project['project_quality'] = project_quality;
 
   let project_skill = { };
