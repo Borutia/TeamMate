@@ -154,7 +154,7 @@ function get_requirements_for_candidates()
   for(let i=0;i<count_click_add_personal_qualities;i++)
   {
     let str = '.add_personal_qualities #' + i;
-    let info = $(str).val();
+    let info = $(str).text();
     let temp = {
       'quality': info
     };
