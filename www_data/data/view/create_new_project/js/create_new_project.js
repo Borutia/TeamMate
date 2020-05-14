@@ -162,11 +162,20 @@ function get_requirements_for_candidates()
   }
   data_project['project_quality'] = project_quality;
 
-  let project_skill = { };
-  project_skill['skill'] = $('#professional_skills').val();
+  let project_skill = [];
+  for(let i=0;i<count_click_add_professional_skills;i++)
+  {
+    let str = '.professional_skills #' + i;
+    let info = $(str).text();
+    let temp = {
+      'skill': info
+    };
+    project_quality.push(temp);
+  }
   data_project['project_skill'] = project_skill;
  
-  data_project['team_size'] = $('#team_size').val();
+  data_project['max_members'] = $('#team_size').val();
+  data_project['now_members'] = 1;
 }
 
 function get_required_resources()
