@@ -127,12 +127,7 @@ function click_log_in()
                 $.cookie('id', data.user_id);
                 //$.cookie('TeamAuth', data.token);
                 $.cookie("cookie_name", "cookie_value", { 
-                    expires: 4, 
-                    path: "/", 
-                    domain: "your_site.ru", 
-                    secure: true 
-                });
-                $.cookie("cookie_name", "cookie_value", { 
+                    expires: 3, 
                     path: "/" ,
                     domain: "your_site.ru" 
                 });
