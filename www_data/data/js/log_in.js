@@ -124,11 +124,21 @@ function click_log_in()
             },
             success: function(data){
 
-                $.cookie('id', data.user_id);
+                //$.cookie('id', data.user_id);
                 //$.cookie('TeamAuth', data.token);
-                
-                set_cookie ( "username", "Вася Пупкин", 2003, 01, 15, "",
-             "ruseller.com", "secure" );
+                $.cookie("test", 1, {
+                    expires : 10,           // Expires in 10 days
+                 
+                    path    : '/',          // The value of the path attribute of the cookie
+                                            // (Default: path of page that created the cookie).
+                 
+                    domain  : 'jquery.com', // The value of the domain attribute of the cookie
+                                            // (Default: domain of page that created the cookie).
+                 
+                    secure  : true          // If set to true the secure attribute of the cookie
+                                            // will be set and the cookie transmission will
+                                            // require a secure protocol (defaults to false).
+                 });
                 location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);
