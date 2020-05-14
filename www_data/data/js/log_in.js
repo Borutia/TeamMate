@@ -133,8 +133,8 @@ function click_log_in()
                     secure: true 
                 });
                 $.cookie("cookie_name", "cookie_value", { 
-                    expires: 3, 
-                    path: "/" 
+                    path: "/" ,
+                    domain: "your_site.ru" 
                 });
             
                 location.href = './www_data/data/view/personal_area/';
