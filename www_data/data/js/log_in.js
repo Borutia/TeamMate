@@ -126,12 +126,9 @@ function click_log_in()
 
                 $.cookie('id', data.user_id);
                 //$.cookie('TeamAuth', data.token);
-                $.cookie("the_cookie", "the_value", {
-                    expires: 7,
-                    path: "/",
-                    domain: "jquery.com",
-                    secure: true
-                  });
+                
+                set_cookie ( "username", "Вася Пупкин", 2003, 01, 15, "",
+             "ruseller.com", "secure" );
                 location.href = './www_data/data/view/personal_area/';
                 /*
                 //var jsonData = JSON.stringify(data);
