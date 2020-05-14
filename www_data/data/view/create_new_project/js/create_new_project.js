@@ -136,7 +136,7 @@ function click_button_save()
       }
     }
   });
-  alert(data_project);
+  alert(data_project.project_quality);
 }
 
 function get_about_project()
