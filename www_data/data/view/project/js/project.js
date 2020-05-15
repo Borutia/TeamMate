@@ -6,20 +6,22 @@ $(function (){
     var name_review = '<a class="review_manager ">Petrov petr</a>';
     var reviews_managers1 = `<div ">Ужасный сотрудник во всех аспектах</div> `;
     
+    /*
     var id = 1;
-    get_review(1);
+    get_people(1);
     var left_block = '#'+ id + ' .left_block_per_review';
     var right_block = '#'+ id + ' .right_block_per_review';
     $(left_block).append(name_review);
     $(right_block).append(reviews_managers1);
-    
+    */
+    /*
     id = 2;
     left_block = '#'+ id + ' .left_block_per_review';
     right_block = '#'+ id + ' .right_block_per_review';
     get_review(2);
     $(left_block).append(name_review);
     $(right_block).append(reviews_managers1);
-    
+    */
 });
 
 function set_attachment()
