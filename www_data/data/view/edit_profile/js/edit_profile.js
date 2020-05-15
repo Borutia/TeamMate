@@ -18,25 +18,6 @@ $(function (){
   });
   */
 
-  /*
-  let student = {
-      name: 'John',
-      age: 30,
-      isAdmin: false,
-      courses: ['html', 'css', 'js'],
-      wife: null
-    };
-  let my_data = {};
-  my_data['education'] = student;
-  alert(JSON.stringify(my_data));
-  
-  var testt = JSON.stringify(student);
-  for(let i=0;i<student.courses.length;i++)
-  {
-      alert(student.courses[i] + student.courses[i+1]);
-  }
-  */
-
   $('#button_add_personal_qualities').click(function(){
     click_add_personal_qualities();
   });
@@ -46,10 +27,10 @@ $(function (){
   });
 });
 
+var user_id = $.cookie('id');
 function get_information()
 {
-  var user_id = $.cookie('id');
-  var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
+  var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/user/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
@@ -60,8 +41,6 @@ function get_information()
     dataType: 'JSON',
     timeout: log_in_timeout,
     success: function(data){
-      //var jsonData = JSON.stringify(data);
-      //var jsonData = $.parseJSON(jsonData);
       output_information(data);
     },
     error: function(request, error){
@@ -82,31 +61,31 @@ function output_information(data){
   $('#birthday').text(data.birthday);
   $('#gender').text(data.sex);
   $('#current_city').text(data.town);
-  /*
-
-  data['ed_country'] = $('#education_country').val();
-  data['ed_town'] = $('#education_city').val();
-  data['vuz'] = $('#university').val();
-  data['specialty'] = $('#specialty').val();
-  data['ed_start'] = $('#learning_peroid_from').val();
-  data['ed_end'] = $('#learning_peroid_to').val();
-
-  data['work_place_country'] = $('#work_place_country').val();
-  data['work_place_city'] = $('#work_place_city').val();
-  data['organization'] = $('#organization').val();
-  data['position'] = $('#position').val();
-  data['working_peroid_from'] = $('#working_peroid_from').val();
-  data['working_peroid_to'] = $('#working_peroid_to').val();
   
-  data['o_sebe'] = $('#about_me_input').val();
-  data['personal_qualities'] = $('#personal_qualities').val();
-  data['professional_skills'] = $('#professional_skills').val();
+  $('#education_country').text(data.ed_country);
+  $('#education_city').text(data.ed_town);
+  $('#university').text(data.vuz);
+  $('#specialty').text(data.specialty);
+  $('#learning_peroid_from').text(data.ed_start);
+  $('#learning_peroid_to').text(data.ed_end);
 
-  data['username'] = $('#login').val();
-  data['email'] = $('#e_mail').val();
-  data['phone_number'] = $('#phone').val();
-  data['password'] = $('#password').val();
-  */
+  $('#work_place_country').text(data.country);
+  $('#work_place_city').text(data.town);
+  $('#organization').text(data.organization);
+  $('#position').text(data.position);
+  $('#working_peroid_from').text(data.work_start);
+  $('#working_peroid_to').text(data.work_end);
+  
+  $('#about_me_input').text(data.o_sebe);
+  
+  //data['personal_qualities'] = $('#personal_qualities').val();
+  //data['professional_skills'] = $('#professional_skills').val();
+
+  $('#login').text(data.username);
+  $('#e_mail').text(data.email);
+  $('#phone').text(data.phone_number);
+  $('#password').text(data.password);
+
 }
 
 var data_log_up = {};
@@ -115,7 +94,7 @@ function click_button_save()
   get_personal_data();
   get_education();
   get_about_me();
-  //get_work_place();
+  get_work_place();
   get_personal_area();
   var user_id = $.cookie('id');
   var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
@@ -130,8 +109,6 @@ function click_button_save()
     timeout: log_in_timeout,
     data: data_log_up,
     success: function(data){
-      //var jsonData = JSON.stringify(data);
-      //var jsonData = $.parseJSON(jsonData);
       location.href = '../../';
     },
     error: function(request, error){
@@ -143,7 +120,6 @@ function click_button_save()
         }
     }
   });
-  //alert(JSON.stringify(data_log_up));
 }
 
 function get_personal_data()
@@ -165,33 +141,37 @@ function get_education()
   education['specialty'] = $('#specialty').val();
   education['ed_start'] = $('#learning_peroid_from').val();
   education['ed_end'] = $('#learning_peroid_to').val();
+  education['user'] = user_id;
   data_log_up['education'] = education;
 
 }
 
 function get_work_place()
 {
-  data_log_up['work_place_country'] = $('#work_place_country').val();
-  data_log_up['work_place_city'] = $('#work_place_city').val();
-  data_log_up['organization'] = $('#organization').val();
-  data_log_up['position'] = $('#position').val();
-  data_log_up['working_peroid_from'] = $('#working_peroid_from').val();
-  data_log_up['working_peroid_to'] = $('#working_peroid_to').val();
+  let work_place = { };
+  work_place['country'] = $('#work_place_country').val();
+  work_place['town'] = $('#work_place_city').val();
+  work_place['organization'] = $('#organization').val();
+  work_place['position'] = $('#position').val();
+  work_place['work_start'] = $('#working_peroid_from').val();
+  work_place['work_end'] = $('#working_peroid_to').val();
+  data_log_up['work_place'] = work_place;
 }
 
 function get_about_me()
 {
   data_log_up['o_sebe'] = $('#about_me_input').val();
+
   data_log_up['personal_qualities'] = $('#personal_qualities').val();
   data_log_up['professional_skills'] = $('#professional_skills').val();
 }
 
 function get_personal_area()
 {
-  data_log_up['username'] = $('#login').val();
-  data_log_up['email'] = $('#e_mail').val();
+  data_log_up['user'] = user_id;
+  //data_log_up['email'] = $('#e_mail').val();
   data_log_up['phone_number'] = $('#phone').val();
-  data_log_up['password'] = $('#password').val();
+  //data_log_up['password'] = $('#password').val();
 }
 
 function get_gender()
@@ -217,7 +197,7 @@ function click_add_professional_skills()
       id: count_click_add_professional_skills,
       text: temp
     }));
-    count++;
+    count_click_add_professional_skills++;
   }
 }
 
@@ -229,6 +209,7 @@ function click_add_personal_qualities(){
       id: count_click_add_personal_qualities,
       text: temp
     }));
+    count_click_add_personal_qualities++;
   }
 }
 

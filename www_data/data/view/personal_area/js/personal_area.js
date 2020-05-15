@@ -64,8 +64,6 @@ function get_personal_infomation(){
         dataType: 'JSON',
         timeout: get_timeout,
         success: function(data){
-            //var jsonData = JSON.stringify(data); конверт в строку json
-            //var jsonData = $.parseJSON(jsonData); //конверт из строки json
             create_personal_information(data);
         },
         error: function(request, error){
@@ -82,8 +80,8 @@ function get_personal_infomation(){
 
 function create_personal_information(data){
     'use strict'; 
-   // $('#avatar').attr("src","../../image/avatar_test.jpg" );
-    $('#avatar').attr("src", data.photo);
+    $('#avatar').attr("src","../../image/avatar_test.jpg" );
+    //$('#avatar').attr("src", data.photo);
     $('#name_of_person').text(data.family + ' ' + data.name + ' ' + data.middle_name);
     $('#login_of_person').text("@" + data.user);
     //left block
