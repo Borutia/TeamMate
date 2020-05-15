@@ -222,9 +222,9 @@ function test()
     set_rating();
     $('.stars').append(personal_peer_review1);
     set_rating();
-    $('.stars').append(personal_peer_review2);
+   // $('.stars').append(personal_peer_review2);
     set_rating();
-    $('.stars').append(personal_peer_review3);
+    //$('.stars').append(personal_peer_review3);
 
 
    // $('.personal_peer_review').append(personal_peer_review2);
