@@ -104,7 +104,7 @@ function click_button_save()
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
   
   $.ajax({
-    type: 'PUT',
+    type: 'PATCH',
     url: log_up_url,
     dataType: 'JSON',
     timeout: log_in_timeout,

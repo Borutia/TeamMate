@@ -23,7 +23,7 @@ $(function (){
     
 });
 
-function create_profile(my_data)
+function create_profile()
 {
   var log_up_url = 'https://teammateru.herokuapp.com/profile/';
   var log_in_timeout = 10000;
