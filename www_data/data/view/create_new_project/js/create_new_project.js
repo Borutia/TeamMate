@@ -151,8 +151,7 @@ function get_about_project()
 function get_requirements_for_candidates()
 {
   let project_quality = [];
-  let i;
-  for(i=0;i<count_click_add_personal_qualities;i++)
+  for(let i=0;i<count_click_add_personal_qualities;i++)
   {
     let str = '.add_personal_qualities #' + i;
     let info = $(str).text();
@@ -164,9 +163,9 @@ function get_requirements_for_candidates()
   data_project['project_quality'] = project_quality;
 
   let project_skill = [];
-  for(i=0;i<count_click_add_professional_skills;i++)
+  for(let j=0;j<count_click_add_professional_skills;j++)
   {
-    let str = '.add_professional_skills #' + i;
+    let str = '.add_professional_skills #' + j;
     let info = $(str).text();
     let temp1 = {
       'skill': info
