@@ -150,6 +150,15 @@ function get_about_project()
 
 function get_requirements_for_candidates()
 {
+  get_project_skill_func();
+  get_project_quality_func();
+ 
+  data_project['max_members'] = $('#team_size').val();
+  data_project['now_members'] = 1;
+}
+
+function get_project_quality_func()
+{
   let project_quality = [];
   for(let i=0;i<count_click_add_personal_qualities;i++)
   {
@@ -161,21 +170,21 @@ function get_requirements_for_candidates()
     project_quality.push(temp);
   }
   data_project['project_quality'] = project_quality;
+}
 
+function get_project_skill_func()
+{
   let project_skill = [];
   for(let j=0;j<count_click_add_professional_skills;j++)
   {
-    let str = '.add_professional_skills #' + j;
-    let info1 = $(str).text();
+    let str1 = '.add_professional_skills #' + j;
+    let info1 = $(str1).text();
     let temp1 = {
       'skill': info1
     };
     project_skill.push(temp1);
   }
   data_project['project_skill'] = project_skill;
- 
-  data_project['max_members'] = $('#team_size').val();
-  data_project['now_members'] = 1;
 }
 
 function get_required_resources()
