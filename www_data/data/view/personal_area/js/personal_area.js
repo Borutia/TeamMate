@@ -90,7 +90,8 @@ function create_personal_information(data){
 
     var space = '<br>';
     //учеба 
-    for(let i=0;i<data.education.length;i++)
+   // for(let i=0;i<data.education.length;i++)
+    for(let i=0;i<1;i++)
     {
         $('.personal_education')
         .append($('<span class="style_of_text">',{
@@ -101,7 +102,7 @@ function create_personal_information(data){
     }
     
     //места работы 
-    for(let i=0;i<data.work_place.length;i++)
+    for(let i=0;i<1;i++)
     {
         $('.personal_jobs')
         .append($('<span class="style_of_text">',{
