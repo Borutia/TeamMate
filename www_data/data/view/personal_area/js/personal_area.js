@@ -1,6 +1,7 @@
 $(function (){
     set_scroll_height('.personal_left_block');
     set_scroll_height('.personal_right_block');
+    //create_profile();
     get_personal_infomation();
     //test();
 
@@ -24,7 +25,7 @@ $(function (){
 
 function create_profile(my_data)
 {
-  var log_up_url = 'http://127.0.0.1:8000/profile/';
+  var log_up_url = 'https://teammateru.herokuapp.com/profile/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
@@ -51,7 +52,7 @@ function get_personal_infomation(){
     if ( $.cookie('id') != null ) {
         var user_id = $.cookie('id');
     }      
-    var get_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
+    var get_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/user/';
     //var get_url = 'http://127.0.0.1:8000/profile/' + user_id + '/';
     var get_timeout = 10000;
     var get_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
