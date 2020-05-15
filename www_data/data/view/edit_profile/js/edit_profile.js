@@ -27,9 +27,10 @@ $(function (){
   });
 });
 
-var user_id = $.cookie('id');
+
 function get_information()
 {
+  var user_id = $.cookie('id');
   var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/user/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
@@ -81,11 +82,10 @@ function output_information(data){
   //data['personal_qualities'] = $('#personal_qualities').val();
   //data['professional_skills'] = $('#professional_skills').val();
 
-  $('#login').text(data.username);
-  $('#e_mail').text(data.email);
+  //$('#login').text(data.user);
+  //$('#e_mail').text(data.email);
   $('#phone').text(data.phone_number);
-  $('#password').text(data.password);
-
+  //$('#password').text(data.password);
 }
 
 var data_log_up = {};
@@ -166,9 +166,9 @@ function get_about_me()
   data_log_up['professional_skills'] = $('#professional_skills').val();
 }
 
-function get_personal_area()
+function get_personal_area(data)
 {
-  data_log_up['user'] = user_id;
+ // data_log_up['user'] = data.user_id;
   //data_log_up['email'] = $('#e_mail').val();
   data_log_up['phone_number'] = $('#phone').val();
   //data_log_up['password'] = $('#password').val();
