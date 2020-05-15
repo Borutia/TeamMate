@@ -47,7 +47,7 @@ function click_add_resource_time()
 var count_click_add_resources_mobility= 0;
 function click_add_resources_mobility(){
   if($('#resources_mobility') !== ''){
-    var temp = $('#resources_mobility').val();
+    let temp = $('#resources_mobility').val();
     $('.add_resources_mobility').append($('<div>',{
       id: count_click_add_resources_mobility,
       text: temp
@@ -60,7 +60,7 @@ var count_click_add_resources_material = 0;
 function click_add_resources_material()
 {
   if($('#resources_material') !== ''){
-    var temp = $('#resources_material').val();
+    let temp = $('#resources_material').val();
     $('.add_resources_material').append($('<div>',{
       id: count_click_add_resources_material,
       text: temp
@@ -72,7 +72,7 @@ function click_add_resources_material()
 var count_click_add_resources_cash = 0;
 function click_add_resources_cash(){
   if($('#resources_cash') !== ''){
-    var temp = $('#resources_cash').val();
+    let temp = $('#resources_cash').val();
     $('.add_resources_cash').append($('<div>',{
       id: count_click_add_resources_cash,
       text: temp
@@ -85,7 +85,7 @@ var count_click_add_professional_skills = 0;
 function click_add_professional_skills()
 {
   if($('#professional_skills') !== ''){
-    var temp = $('#professional_skills').val();
+    let temp = $('#professional_skills').val();
     $('.add_professional_skills').append($('<div>',{
       id: count_click_add_professional_skills,
       text: temp
@@ -97,7 +97,7 @@ function click_add_professional_skills()
 var count_click_add_personal_qualities = 0;
 function click_add_personal_qualities(){
   if($('#personal_qualities') !== ''){
-    var temp = $('#personal_qualities').val();
+    let temp = $('#personal_qualities').val();
     $('.add_personal_qualities').append($('<div>',{
       id: count_click_add_personal_qualities,
       text: temp
