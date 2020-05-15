@@ -93,19 +93,22 @@ function create_personal_information(data){
    // for(let i=0;i<data.education.length;i++)
     for(let i=0;i<1;i++)
     {
+        let personal_education = data.education[i].ed_start + '-' + data.education[i].ed_end + ' ' + data.education[i].vuz + ' ' + data.education[i].specialty
+
         $('.personal_education')
         .append($('<span class="style_of_text">',{
-            text: data.education[i].ed_start + '-' + data.education[i].ed_end + ' ' + data.education[i].vuz + ' ' + data.education[i].specialty
+            text: personal_education
         }));   
         $('.personal_education').append(space); 
     }
     
     //места работы 
     for(let i=0;i<1;i++)
-    {
+    { 
+        let personal_jobs = data.work_place[i].work_start + '-' + data.work_place[i].work_end + ' ' + data.work_place[i].organization + ' ' + data.work_place[i].position;
         $('.personal_jobs')
         .append($('<span class="style_of_text">',{
-            text: data.work_place[i].work_start + '-' + data.work_place[i].work_end + ' ' + data.work_place[i].organization + ' ' + data.work_place[i].position
+            text: personal_jobs
         }));    
         $('.personal_jobs').append(space);  
     }
