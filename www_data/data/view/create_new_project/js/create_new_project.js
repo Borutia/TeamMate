@@ -166,9 +166,9 @@ function get_requirements_for_candidates()
   for(let j=0;j<count_click_add_professional_skills;j++)
   {
     let str = '.add_professional_skills #' + j;
-    let info = $(str).text();
+    let info1 = $(str).text();
     let temp1 = {
-      'skill': info
+      'skill': info1
     };
     project_skill.push(temp1);
   }
