@@ -19,12 +19,13 @@ $(function (){
     get_review(2);
     $(left_block).append(name_review);
     $(right_block).append(reviews_managers1);
+    
 });
 
 function set_attachment()
 {
     $('#technical_task').attr("src","../../image/attachment.png" );
-    $('#end_to_end').attr("src","../../image/attachment.png" );
+    //$('#end_to_end').attr("src","../../image/attachment.png" );
 }
 
 function get_people(id){

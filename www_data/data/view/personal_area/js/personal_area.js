@@ -172,15 +172,12 @@ function test()
     $('#avatar').attr("src","../../image/avatar_test.jpg" );
     var educations = `<span class="style_of_text">2012-14 УрФУ Вычислительные машины, комплексы, системы и сети </span>`;
     var jobs = `<span class="style_of_text">2014-... “Вектор”  Разработчик внутренних систем  </span> `;
-    for(var i=0;i<5;i++)
-    {
         $('#name_of_person').text("Dmitry Borutya");
         $('#login_of_person').text("@" + "Borutya");
         $('#personal_position').text("Программист С++");
         $('#personal_birthday').text("Дата Рождения: 01.06.1997");
         $('.personal_education').append(educations);
         $('.personal_jobs').append(jobs);
-    }
 
     //right block
     $('.personal_about_me').text("Веселый парень, знающий свое дело. Люблю код и все, что с ним связано. Очень общительный и умеющий слушать собеседник. Также холост. ");
