@@ -11,5 +11,5 @@ function set_scroll_height(block) {
     //получаем высоту страницы
     var h_all = $(document).outerHeight(true);
     //устанавливаем высоту блока для прокрутки
-    $(block).css('height', h_all - 93);
+    $(block).css('height', h_all + 200);
 }
