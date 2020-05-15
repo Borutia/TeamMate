@@ -93,7 +93,7 @@ function create_personal_information(data){
    // for(let i=0;i<data.education.length;i++)
     for(let i=0;i<1;i++)
     {
-        let personal_education = data.education[i].ed_start + '-' + data.education[i].ed_end + ' ' + data.education[i].vuz + ' ' + data.education[i].specialty
+        let personal_education = data.education[i].ed_start + '-' + data.education[i].ed_end + ' ' + data.education[i].vuz + ' ' + data.education[i].specialty;
 
         $('.personal_education')
         .append($('<span class="style_of_text">',{
