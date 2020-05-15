@@ -42,9 +42,7 @@ function get_information()
     dataType: 'JSON',
     timeout: log_in_timeout,
     success: function(data){
-      $('#name').text(data.name);
-      $('#sername').val(data.family);
-      //output_information(data);
+      output_information(data);
     },
     error: function(request, error){
         if (error == "timeout") {
@@ -58,35 +56,35 @@ function get_information()
 }
 
 function output_information(data){
-  $('#sername').text(data.family);
-  $('#name').text(data.name);
-  $('#patronymic').text(data.middle_name);
-  $('#birthday').text(data.birthday);
-  $('#gender').text(data.sex);
-  $('#current_city').text(data.town);
+  $('#sername').val(data.family);
+  $('#name').val(data.name);
+  $('#patronymic').val(data.middle_name);
+  $('#birthday').val(data.birthday);
+  $('#gender').val(data.sex);
+  $('#current_city').val(data.town);
   
-  $('#education_country').text(data.ed_country);
-  $('#education_city').text(data.ed_town);
-  $('#university').text(data.vuz);
-  $('#specialty').text(data.specialty);
-  $('#learning_peroid_from').text(data.ed_start);
-  $('#learning_peroid_to').text(data.ed_end);
+  $('#education_country').val(data.ed_country);
+  $('#education_city').val(data.ed_town);
+  $('#university').val(data.vuz);
+  $('#specialty').val(data.specialty);
+  $('#learning_peroid_from').val(data.ed_start);
+  $('#learning_peroid_to').val(data.ed_end);
 
-  $('#work_place_country').text(data.country);
-  $('#work_place_city').text(data.town);
-  $('#organization').text(data.organization);
-  $('#position').text(data.position);
-  $('#working_peroid_from').text(data.work_start);
-  $('#working_peroid_to').text(data.work_end);
+  $('#work_place_country').val(data.country);
+  $('#work_place_city').val(data.town);
+  $('#organization').val(data.organization);
+  $('#position').val(data.position);
+  $('#working_peroid_from').val(data.work_start);
+  $('#working_peroid_to').val(data.work_end);
   
-  $('#about_me_input').text(data.o_sebe);
+  $('#about_me_input').val(data.o_sebe);
   
   //data['personal_qualities'] = $('#personal_qualities').val();
   //data['professional_skills'] = $('#professional_skills').val();
 
   //$('#login').text(data.user);
   //$('#e_mail').text(data.email);
-  $('#phone').text(data.phone_number);
+  $('#phone').val(data.phone_number);
   //$('#password').text(data.password);
 }
 
@@ -164,8 +162,29 @@ function get_about_me()
 {
   data_log_up['o_sebe'] = $('#about_me_input').val();
 
-  data_log_up['personal_qualities'] = $('#personal_qualities').val();
-  data_log_up['professional_skills'] = $('#professional_skills').val();
+  let project_quality = [];
+  for(let i=0;i<count_click_add_personal_qualities;i++)
+  {
+    let str = '.add_personal_qualities #' + i;
+    let info = $(str).text();
+    let temp = {
+      'quality': info
+    };
+    project_quality.push(temp);
+  }
+  data_log_up['personal_quality'] = project_quality;
+
+  let project_skill = [];
+  for(let i=0;i<count_click_add_professional_skills;i++)
+  {
+    let str = '.professional_skills #' + i;
+    let info = $(str).text();
+    let temp = {
+      'skill': info
+    };
+    project_quality.push(temp);
+  }
+  data_log_up['skill'] = project_skill;
 }
 
 function get_personal_area(data)
