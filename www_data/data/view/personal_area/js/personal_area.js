@@ -95,8 +95,7 @@ function create_personal_information(data){
     {
         $('.personal_education')
         .append($('<span class="style_of_text">',{
-            text: data.education[i].ed_start + '-' + data.education[i].ed_end + 
-            ' ' + data.education[i].vuz + ' ' + data.education[i].specialty
+            text: data.education[i].ed_start + '-' + data.education[i].ed_end + ' ' + data.education[i].vuz + ' ' + data.education[i].specialty
         }));   
         $('.personal_education').append(space); 
     }
@@ -106,8 +105,7 @@ function create_personal_information(data){
     {
         $('.personal_jobs')
         .append($('<span class="style_of_text">',{
-            text: data.work_place[i].work_start + '-' + data.work_place[i].work_end +
-            data.work_place[i].organization + ' ' + data.work_place[i].position
+            text: data.work_place[i].work_start + '-' + data.work_place[i].work_end + ' ' + data.work_place[i].organization + ' ' + data.work_place[i].position
         }));    
         $('.personal_jobs').append(space);  
     }
