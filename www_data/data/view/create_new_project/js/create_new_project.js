@@ -35,10 +35,10 @@ var count_click_add_resource_time = 0;
 function click_add_resource_time()
 {
   if($('#resource_time') !== ''){
-    let temp = $('#resource_time').val();
+    let add_new_resource_time= $('#resource_time').val();
     $('.add_resource_time').append($('<div>',{
       id: count_click_add_resource_time,
-      text: temp
+      text: add_new_resource_time
     }));
     count_click_add_resource_time++;
   }
@@ -47,10 +47,10 @@ function click_add_resource_time()
 var count_click_add_resources_mobility= 0;
 function click_add_resources_mobility(){
   if($('#resources_mobility') !== ''){
-    let temp = $('#resources_mobility').val();
+    let add_new_resources_mobility = $('#resources_mobility').val();
     $('.add_resources_mobility').append($('<div>',{
       id: count_click_add_resources_mobility,
-      text: temp
+      text: add_new_resources_mobility
     }));
     count_click_add_resources_mobility++;
   }
@@ -60,10 +60,10 @@ var count_click_add_resources_material = 0;
 function click_add_resources_material()
 {
   if($('#resources_material') !== ''){
-    let temp = $('#resources_material').val();
+    let add_new_resources_material = $('#resources_material').val();
     $('.add_resources_material').append($('<div>',{
       id: count_click_add_resources_material,
-      text: temp
+      text: add_new_resources_material
     }));
     count_click_add_resources_material++;
   }
@@ -72,10 +72,10 @@ function click_add_resources_material()
 var count_click_add_resources_cash = 0;
 function click_add_resources_cash(){
   if($('#resources_cash') !== ''){
-    let temp = $('#resources_cash').val();
+    let add_new_resources_cash = $('#resources_cash').val();
     $('.add_resources_cash').append($('<div>',{
       id: count_click_add_resources_cash,
-      text: temp
+      text: add_new_resources_cash
     }));
     count_click_add_resources_cash++;
   }
@@ -85,10 +85,10 @@ var count_click_add_professional_skills = 0;
 function click_add_professional_skills()
 {
   if($('#professional_skills') !== ''){
-    let temp = $('#professional_skills').val();
+    let add_new_professional_skills = $('#professional_skills').val();
     $('.add_professional_skills').append($('<div>',{
       id: count_click_add_professional_skills,
-      text: temp
+      text: add_new_professional_skills
     }));
     count_click_add_professional_skills++;
   }
@@ -97,10 +97,10 @@ function click_add_professional_skills()
 var count_click_add_personal_qualities = 0;
 function click_add_personal_qualities(){
   if($('#personal_qualities') !== ''){
-    let temp = $('#personal_qualities').val();
+    let add_new_personal_qualities = $('#personal_qualities').val();
     $('.add_personal_qualities').append($('<div>',{
       id: count_click_add_personal_qualities,
-      text: temp
+      text: add_new_personal_qualities
     }));
     count_click_add_personal_qualities++;
   }
@@ -151,7 +151,8 @@ function get_about_project()
 function get_requirements_for_candidates()
 {
   let project_quality = [];
-  for(let i=0;i<count_click_add_personal_qualities;i++)
+  let i;
+  for(i=0;i<count_click_add_personal_qualities;i++)
   {
     let str = '.add_personal_qualities #' + i;
     let info = $(str).text();
@@ -163,7 +164,7 @@ function get_requirements_for_candidates()
   data_project['project_quality'] = project_quality;
 
   let project_skill = [];
-  for(let i=0;i<count_click_add_professional_skills;i++)
+  for(i=0;i<count_click_add_professional_skills;i++)
   {
     let str = '.add_professional_skills #' + i;
     let info = $(str).text();
