@@ -1,7 +1,4 @@
 $(function (){
-    $(window).resize(function(){
-        location.reload();
-    });
     main_menu();
     all_projects();
     my_projects();
