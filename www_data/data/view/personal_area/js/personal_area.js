@@ -87,7 +87,7 @@ function create_personal_information(data){
     //left block
     //$('#personal_position').text(data.personal_quality.quality);
     $('#personal_birthday').text("Дата Рождения: " + data.birthday);
-    var jsonData = $.parseJSON(data);
+    var jsonData = JSON.parse(data);
     console.log(jsonData.education[0].vuz);
     alert(jsonData);
     var space = '<br>';
