@@ -126,20 +126,20 @@ function click_log_in()
             success: function(data){
                 XMLHttpRequest.withCredentials = true
                 $.cookie('id', data.user_id);
-                //$.cookie('TeamAuth', data.token);
+                $.cookie('TeamAuth', data.token);
                 //$.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
                 
-                
+                /*
                 $.cookie("cookie_name", "cookie_value", { 
                     expires: 3, 
                     path: "/", 
                     domain: "teammateru.herokuapp.com", 
                     secure: true 
                 });
-                
+                */
                 
             
-               // location.href = './www_data/data/view/personal_area/';
+                location.href = './www_data/data/view/personal_area/';
                 //location.href = 'http://127.0.0.1:5500/www_data/data/view/personal_area/';
             },
             error: function(request, error){
