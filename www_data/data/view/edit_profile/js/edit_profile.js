@@ -42,7 +42,9 @@ function get_information()
     dataType: 'JSON',
     timeout: log_in_timeout,
     success: function(data){
-      output_information(data);
+      $('#name').text(data.name);
+      $('#sername').val(data.family);
+      //output_information(data);
     },
     error: function(request, error){
         if (error == "timeout") {
