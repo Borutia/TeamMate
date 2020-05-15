@@ -1,7 +1,7 @@
 html{
     background: url(../image/background.jpg) ;
     max-width: 1153px;
-    max-height: 700px;
+    max-height: 1000px;
 }
 /*плавная загрузка страниц*/
 @-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
