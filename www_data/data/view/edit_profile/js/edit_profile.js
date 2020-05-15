@@ -110,7 +110,8 @@ function click_button_save()
     timeout: log_in_timeout,
     data: data_log_up,
     success: function(data){
-      location.href = '../../';
+      alert('good!');
+      //location.href = '../../';
     },
     error: function(request, error){
         if (error == "timeout") {

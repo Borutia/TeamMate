@@ -107,13 +107,14 @@ function click_add_personal_qualities(){
 }
 
 var data_project = {};
+var user_id;
 function click_button_save()
 {
-  //get_about_project();
+  get_about_project();
   get_requirements_for_candidates();
-  //get_required_resources();
-  var user_id = $.cookie('id');
-  var get_url = 'https://teammateru.herokuapp.com/project/' + user_id + '/';
+  get_required_resources();
+  user_id = $.cookie('id');
+  var get_url = 'https://teammateru.herokuapp.com/project/add/';
   var get_timeout = 10000;
   var get_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var get_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
@@ -136,7 +137,6 @@ function click_button_save()
       }
     }
   });
-  alert(JSON.stringify(data_project));
 }
 
 function get_about_project()
@@ -170,7 +170,7 @@ function get_requirements_for_candidates()
     let temp = {
       'skill': info
     };
-    project_quality.push(temp);
+    project_skill.push(temp);
   }
   data_project['project_skill'] = project_skill;
  
@@ -180,12 +180,55 @@ function get_requirements_for_candidates()
 
 function get_required_resources()
 {
-  let project_resources = { };
-  project_resources['resource_time'] = $('#resource_time').val();
-  project_resources['resources_mobility'] = $('#resources_mobility').val();
-  project_resources['resources_material'] = $('#resources_material').val();
-  project_resources['resources_cash'] = $('#resources_cash').val();
-  data_project['project_resources'] = project_resources;
+  //время
+  let project_resources = [];
+  for(let i=0;i<count_click_add_resource_time;i++)
+  {
+    let str = '.add_resource_time #' + i;
+    let info = $(str).text();
+    let temp = {
+      'type': 'Время',
+      'dsc': info
+    };
+    project_resources.push(temp);
+  }
+  
+  //Мобильность
+  for(let i=0;i<count_click_add_resource_time;i++)
+  {
+    let str = '.add_resources_mobility #' + i;
+    let info = $(str).text();
+    let temp = {
+      'type': 'Мобильность',
+      'dsc': info
+    };
+    project_resources.push(temp);
+  }
+
+  //Материальные
+  for(let i=0;i<count_click_add_resource_time;i++)
+  {
+    let str = '.add_resources_material #' + i;
+    let info = $(str).text();
+    let temp = {
+      'type': 'Материальные',
+      'dsc': info
+    };
+    project_resources.push(temp);
+  }
+
+  //Денежные
+  for(let i=0;i<count_click_add_resource_time;i++)
+  {
+    let str = '.add_resources_cash #' + i;
+    let info = $(str).text();
+    let temp = {
+      'type': 'Денежные',
+      'dsc': info
+    };
+    project_resources.push(temp);
+  }
+  data_project['project_resource'] = project_resources;
 }
 
 function get_red_stars(){
