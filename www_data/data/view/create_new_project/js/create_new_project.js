@@ -35,7 +35,7 @@ var count_click_add_resource_time = 0;
 function click_add_resource_time()
 {
   if($('#resource_time') !== ''){
-    var temp = $('#resource_time').val();
+    let temp = $('#resource_time').val();
     $('.add_resource_time').append($('<div>',{
       id: count_click_add_resource_time,
       text: temp
