@@ -139,7 +139,7 @@ function click_log_in()
                 */
                 
             
-                location.href = './www_data/data/view/personal_area/';
+               // location.href = './www_data/data/view/personal_area/';
                 //location.href = 'http://127.0.0.1:5500/www_data/data/view/personal_area/';
             },
             error: function(request, error){
