@@ -17,7 +17,9 @@ function get_projects()
         dataType: 'JSON',
         timeout: get_timeout,
         success: function(data){
-            console.log(data.result[0].town);
+            data.forEach(function(item, i, arr) {
+                console.log( i + ": " + item + " (массив:" + arr + ")" );
+              });
             set_projects(data);
         },
         error: function(request, error){
