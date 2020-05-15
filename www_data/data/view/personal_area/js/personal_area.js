@@ -3,7 +3,7 @@ $(function (){
     set_scroll_height('.personal_right_block');
     //create_profile();
     get_personal_infomation();
-    //test();
+    test();
 
     //рейтинг
     $('.rating .star').hover(function() {
@@ -87,7 +87,7 @@ function create_personal_information(data){
     //left block
     //$('#personal_position').text(data.personal_quality.quality);
     $('#personal_birthday').text("Дата Рождения: " + data.birthday);
-    
+
     $('.personal_about_me').text(data.o_sebe);
 
     var space = '<br>';
@@ -221,6 +221,11 @@ function test()
     //var personal_peer_review1 = `Стрессоустойчивость`;
     set_rating();
     $('.stars').append(personal_peer_review1);
+    set_rating();
+    $('.stars').append(personal_peer_review2);
+    set_rating();
+    $('.stars').append(personal_peer_review3);
+
 
    // $('.personal_peer_review').append(personal_peer_review2);
     //$('.personal_peer_review').append(personal_peer_review3);

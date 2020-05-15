@@ -17,6 +17,7 @@ function get_projects()
         dataType: 'JSON',
         timeout: get_timeout,
         success: function(data){
+            console.log(data.result[0].town);
             set_projects(data);
         },
         error: function(request, error){
