@@ -27,7 +27,7 @@ $(function (){
   });
 });
 
-
+var id_profile ;
 function get_information()
 {
   var user_id = $.cookie('id');
@@ -42,6 +42,7 @@ function get_information()
     dataType: 'JSON',
     timeout: log_in_timeout,
     success: function(data){
+      id_profile = data.id;
       output_information(data);
     },
     error: function(request, error){
@@ -97,7 +98,7 @@ function click_button_save()
   get_about_me();
   get_work_place();
   get_personal_area();
-  var log_up_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
+  var log_up_url = 'https://teammateru.herokuapp.com/profile/' + id_profile + '/';
   var log_in_timeout = 10000;
   var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
   var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
