@@ -218,9 +218,9 @@ function test()
     //var personal_peer_review1 = `Стрессоустойчивость`;
     set_rating();
     $('.stars').append(personal_peer_review1);
-    set_rating();
+   // set_rating();
    // $('.stars').append(personal_peer_review2);
-    set_rating();
+    //set_rating();
     //$('.stars').append(personal_peer_review3);
 
 
