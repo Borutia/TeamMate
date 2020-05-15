@@ -167,10 +167,10 @@ function get_requirements_for_candidates()
   {
     let str = '.add_professional_skills #' + i;
     let info = $(str).text();
-    let temp = {
+    let temp1 = {
       'skill': info
     };
-    project_skill.push(temp);
+    project_skill.push(temp1);
   }
   data_project['project_skill'] = project_skill;
  
@@ -187,11 +187,11 @@ function get_required_resources()
   {
     let str = '.add_resource_time #' + i;
     let info = $(str).text();
-    let temp = {
+    let temp2 = {
       'type': 'Время',
       'dsc': info
     };
-    project_resources.push(temp);
+    project_resources.push(temp2);
   }
   
   //Мобильность
@@ -199,11 +199,11 @@ function get_required_resources()
   {
     let str = '.add_resources_mobility #' + i;
     let info = $(str).text();
-    let temp = {
+    let temp3 = {
       'type': 'Мобильность',
       'dsc': info
     };
-    project_resources.push(temp);
+    project_resources.push(temp3);
   }
 
   //Материальные
@@ -211,11 +211,11 @@ function get_required_resources()
   {
     let str = '.add_resources_material #' + i;
     let info = $(str).text();
-    let temp = {
+    let temp4 = {
       'type': 'Материальные',
       'dsc': info
     };
-    project_resources.push(temp);
+    project_resources.push(temp4);
   }
 
   //Денежные
@@ -223,11 +223,11 @@ function get_required_resources()
   {
     let str = '.add_resources_cash #' + i;
     let info = $(str).text();
-    let temp = {
+    let temp5 = {
       'type': 'Денежные',
       'dsc': info
     };
-    project_resources.push(temp);
+    project_resources.push(temp5);
   }
   data_project['project_resource'] = project_resources;
 }
