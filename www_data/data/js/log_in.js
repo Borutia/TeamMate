@@ -124,19 +124,19 @@ function click_log_in()
                 'password': password
             },
             success: function(data){
-
+                XMLHttpRequest.withCredentials = true
                 $.cookie('id', data.user_id);
                 //$.cookie('TeamAuth', data.token);
                 //$.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
                 
-                /*
+                
                 $.cookie("cookie_name", "cookie_value", { 
                     expires: 3, 
                     path: "/", 
                     domain: "teammateru.herokuapp.com", 
                     secure: true 
                 });
-                */
+                
                 
             
                // location.href = './www_data/data/view/personal_area/';
