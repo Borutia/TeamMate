@@ -87,9 +87,9 @@ function create_personal_information(data){
     //left block
     //$('#personal_position').text(data.personal_quality.quality);
     $('#personal_birthday').text("Дата Рождения: " + data.birthday);
-    var datajson = $.parseJSON(data);
-    var datajson = $.parseJSON( JSON.stringify(data));
-    console.log(data.education[0].vuz)
+    
+    $('.personal_about_me').text(data.o_sebe);
+
     var space = '<br>';
     //учеба 
    // for(let i=0;i<data.education.length;i++)
@@ -116,7 +116,7 @@ function create_personal_information(data){
     }
    
     //right block
-    $('.personal_about_me').text(data.o_sebe);
+
 
     for(let i=0;i<data.skill.length;i++)
     {
