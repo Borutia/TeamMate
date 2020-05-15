@@ -165,7 +165,7 @@ function get_requirements_for_candidates()
   let project_skill = [];
   for(let i=0;i<count_click_add_professional_skills;i++)
   {
-    let str = '.professional_skills #' + i;
+    let str = '.add_professional_skills #' + i;
     let info = $(str).text();
     let temp = {
       'skill': info
@@ -182,7 +182,8 @@ function get_required_resources()
 {
   //время
   let project_resources = [];
-  for(let i=0;i<count_click_add_resource_time;i++)
+  let i ;
+  for(i=0;i<count_click_add_resource_time;i++)
   {
     let str = '.add_resource_time #' + i;
     let info = $(str).text();
@@ -194,7 +195,7 @@ function get_required_resources()
   }
   
   //Мобильность
-  for(let i=0;i<count_click_add_resource_time;i++)
+  for(i=0;i<count_click_add_resources_mobility;i++)
   {
     let str = '.add_resources_mobility #' + i;
     let info = $(str).text();
@@ -206,7 +207,7 @@ function get_required_resources()
   }
 
   //Материальные
-  for(let i=0;i<count_click_add_resource_time;i++)
+  for(i=0;i<count_click_add_resources_material;i++)
   {
     let str = '.add_resources_material #' + i;
     let info = $(str).text();
@@ -218,7 +219,7 @@ function get_required_resources()
   }
 
   //Денежные
-  for(let i=0;i<count_click_add_resource_time;i++)
+  for(i=0;i<count_click_add_resources_cash;i++)
   {
     let str = '.add_resources_cash #' + i;
     let info = $(str).text();
