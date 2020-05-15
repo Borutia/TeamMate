@@ -105,6 +105,7 @@ function get_url()
 function click_log_in()
 {
     var log_in_url = 'https://teammateru.herokuapp.com/auth/login/login/';
+   // var log_in_url = 'http://127.0.0.1:8000/auth/login/login/';
     var login = $('#login').val();
     var password = $('#password').val();
     var log_in_timeout = 10000;
@@ -126,7 +127,7 @@ function click_log_in()
 
                 $.cookie('id', data.user_id);
                 //$.cookie('TeamAuth', data.token);
-                $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
+                //$.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
                 
                 /*
                 $.cookie("cookie_name", "cookie_value", { 
@@ -139,17 +140,7 @@ function click_log_in()
                 
             
                 location.href = './www_data/data/view/personal_area/';
-                /*
-                //var jsonData = JSON.stringify(data);
-               // var jsonData = $.parseJSON(data);
-                if (data == 'Получены куки для аутентификации') { 
-                    $.cookie('id', data.id);
-                    location.href = './www_data/data/view/personal_area/';
-                } 
-                else { 
-                    alert('Неправильный логин или пароль');
-                }
-                */
+                //location.href = 'http://127.0.0.1:5500/www_data/data/view/personal_area/';
             },
             error: function(request, error){
                 if (error == "timeout") {

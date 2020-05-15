@@ -22,11 +22,37 @@ $(function (){
     
 });
 
+function create_profile(my_data)
+{
+  var log_up_url = 'http://127.0.0.1:8000/profile/';
+  var log_in_timeout = 10000;
+  var log_in_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
+  var log_in_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';
+
+  $.ajax({
+    type: 'POST',
+    url: log_up_url,
+    dataType: 'JSON',
+    timeout: log_in_timeout,
+    data: {
+      'id' : my_data.id,
+      'user' : my_data.user
+    },
+    success: function(data){
+      alert('Профиль создан!');
+    },
+    error: function(request, error){
+       alert('ошибка создания профиля!');
+    }
+  });
+}
+
 function get_personal_infomation(){
     if ( $.cookie('id') != null ) {
         var user_id = $.cookie('id');
     }      
-    var get_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
+    //var get_url = 'https://teammateru.herokuapp.com/profile/' + user_id + '/';
+    var get_url = 'http://127.0.0.1:8000/profile/' + user_id + '/';
     var get_timeout = 10000;
     var get_error_timeout = 'Внимание! Время ожидания ответа сервера истекло';
     var get_error_default = 'Внимание! Произошла ошибка, попробуйте отправить информацию еще раз';  
