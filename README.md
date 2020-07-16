@@ -1,1 +1,1 @@
-# TeamMate (front)
+# TeamMate (frontend)
